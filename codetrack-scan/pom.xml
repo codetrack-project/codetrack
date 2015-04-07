@@ -10,7 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>codetrack-annotation</artifactId>
+    <artifactId>codetrack-scan</artifactId>
     <packaging>jar</packaging>
+
 
 </project>

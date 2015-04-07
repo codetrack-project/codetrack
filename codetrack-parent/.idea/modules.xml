@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/codetrack-annotation.iml" filepath="$PROJECT_DIR$/codetrack-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-parent.iml" filepath="$PROJECT_DIR$/codetrack-parent.iml" />
     </modules>
   </component>
 </project>
