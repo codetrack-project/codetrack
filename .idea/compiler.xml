@@ -25,7 +25,11 @@
         <processorPath useClasspath="true" />
         <module name="codetrack-annotation" />
         <module name="codetrack-scan" />
+        <module name="codetrack-tracker" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="codetrack-tracker" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

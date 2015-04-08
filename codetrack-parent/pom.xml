@@ -11,6 +11,7 @@
     <modules>
         <module>../codetrack-annotation</module>
         <module>../codetrack-scan</module>
+        <module>../codetrack-tracker</module>
     </modules>
 
 
