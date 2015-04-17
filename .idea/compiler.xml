@@ -25,6 +25,7 @@
         <processorPath useClasspath="true" />
         <module name="codetrack-annotation" />
         <module name="codetrack-scan" />
+        <module name="codetrack-shell" />
         <module name="codetrack-tracker" />
       </profile>
     </annotationProcessing>

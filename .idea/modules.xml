@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/codetrack-annotation/codetrack-annotation.iml" filepath="$PROJECT_DIR$/codetrack-annotation/codetrack-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/codetrack-parent/codetrack-parent.iml" filepath="$PROJECT_DIR$/codetrack-parent/codetrack-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/codetrack-scan/codetrack-scan.iml" filepath="$PROJECT_DIR$/codetrack-scan/codetrack-scan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-shell/codetrack-shell.iml" filepath="$PROJECT_DIR$/codetrack-shell/codetrack-shell.iml" />
       <module fileurl="file://$PROJECT_DIR$/codetrack-tracker/codetrack-tracker.iml" filepath="$PROJECT_DIR$/codetrack-tracker/codetrack-tracker.iml" />
     </modules>
   </component>
