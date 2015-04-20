@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright 2015 the original author or authors.
   ~
@@ -14,18 +13,20 @@
   ~  See the License for the specific language governing permissions and
   ~  limitations under the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>codetrack-parent</artifactId>
-        <groupId>codetrack</groupId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath>../codetrack-parent/pom.xml</relativePath>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>codetrack-annotation</artifactId>
-    <packaging>jar</packaging>
+<configuration>
 
-</project>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>codetrack.log</file>
+
+    <encoder>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <logger name="org.codetrack" level="trace"/>
+
+  <root level="info">
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>

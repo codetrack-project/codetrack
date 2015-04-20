@@ -30,6 +30,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="codetrack-annotation" target="1.7" />
+      <module name="codetrack-parent" target="1.7" />
+      <module name="codetrack-scan" target="1.7" />
+      <module name="codetrack-shell" target="1.7" />
       <module name="codetrack-tracker" target="1.7" />
     </bytecodeTargetLevel>
   </component>

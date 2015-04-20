@@ -12,3 +12,11 @@
 hs_err_pid*
 
 target/
+
+# IDE controller files
+.idea/
+*.iml
+
+# Logging files
+*.log
+*.hist

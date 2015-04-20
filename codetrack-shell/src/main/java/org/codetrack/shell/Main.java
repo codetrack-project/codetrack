@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2015 the original author or authors.
  *
@@ -14,21 +15,21 @@
  *  limitations under the License.
  */
 
-package org.codetrack.tracker;
+package org.codetrack.shell;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.shell.Bootstrap;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = CodetrackTrackerApplication.class)
-@WebAppConfiguration
-public class CodetrackTrackerApplicationTests {
+import java.io.IOException;
 
-	@Test
-	public void contextLoads() {
-	}
+/**
+ * Class to run shell in the IDE
+ *
+ * @author josecmoj at 19/04/15.
+ */
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        Bootstrap.main(args);
+    }
 
 }
