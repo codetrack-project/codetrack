@@ -21,7 +21,7 @@ Track JSF scanner processors
 
 To run first download and build project with:
 
-    $> git clone https://github.com/josecmoj/codetrack.git
+    $> git clone https://github.com/codetrack-project/codetrack.git
     $> mvn install
     
 To execute codetrack-shell
