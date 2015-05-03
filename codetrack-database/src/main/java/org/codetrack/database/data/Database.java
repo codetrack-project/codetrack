@@ -22,29 +22,53 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
+ * This is Database class graph object
+ *
  * @author josecmoj at 02/05/15.
  */
 public class Database implements Serializable {
 
     private static final long serialVersionUID = -1L;
 
+    /**
+     * Name of database
+     */
     private String name;
 
+    /**
+     * Reference to project
+     */
     private Project project;
 
+    /**
+     * Last update date
+     */
     private Date lastUpdate;
 
+    /**
+     * Hash code on load database time
+     */
     private transient int loadedHashCode;
 
     public Database() {
     }
 
+    /**
+     * Constructor with builder instance
+     *
+     * @param builder
+     */
     private Database(Builder builder) {
         setLastUpdate(builder.lastUpdate);
         setName(builder.name);
         setProject(builder.project);
     }
 
+    /**
+     * Access to new Builder instance
+     *
+     * @return new Database.Builder instance
+     */
     public static Builder newBuilder() {
         return new Builder();
     }
@@ -104,7 +128,9 @@ public class Database implements Serializable {
                 .toString();
     }
 
-
+    /**
+     * Builder class to Database
+     */
     public static final class Builder {
         private Date lastUpdate;
         private String name;
@@ -136,10 +162,18 @@ public class Database implements Serializable {
         }
     }
 
+    /**
+     * Indicate if Database graph is modified
+     *
+     * @return
+     */
     public boolean isModified() {
         return (loadedHashCode != hashCode());
     }
 
+    /**
+     * Mark load time hash code
+     */
     public void markIsLoaded() {
         loadedHashCode = hashCode();
     }

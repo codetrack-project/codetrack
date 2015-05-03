@@ -37,27 +37,48 @@ import com.google.common.base.Objects;
 import java.io.Serializable;
 
 /**
+ * Project class store all information about tracked project
+ *
  * @author josecmoj at 02/05/15.
  */
 public class Project implements Serializable {
 
     private static final long serialVersionUID = -1L;
 
+    /**
+     * Project Id
+     */
     private String id;
 
+    /**
+     * Project name
+     */
     private String name;
 
+    /**
+     * Project description
+     */
     private String description;
 
     public Project() {
     }
 
+    /**
+     * Constructor with Project.Builder instance
+     *
+     * @param builder instance
+     */
     private Project(Builder builder) {
         setDescription(builder.description);
         setId(builder.id);
         setName(builder.name);
     }
 
+    /**
+     * Access to new Project.Builder instance
+     *
+     * @return Project.Builder instance
+     */
     public static Builder newBuilder() {
         return new Builder();
     }
@@ -116,7 +137,9 @@ public class Project implements Serializable {
                 .toString();
     }
 
-
+    /**
+     * Project.Builder class
+     */
     public static final class Builder {
         private String description;
         private String id;
