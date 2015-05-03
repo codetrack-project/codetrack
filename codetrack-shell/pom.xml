@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2015 the original author or authors.
+  ~ Copyright 2015 the original author or authors members of codetrack.org
   ~
   ~  Licensed under the Apache License, Version 2.0 (the "License");
   ~  you may not use this file except in compliance with the License.
@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>codetrack-shell</artifactId>
+    <name>Codetrack Shell Tool</name>
 
     <properties>
-        <spring.shell.version>1.1.0.RELEASE</spring.shell.version>
         <jar.mainclass>org.springframework.shell.Bootstrap</jar.mainclass>
     </properties>
 
@@ -36,57 +36,62 @@
         <dependency>
             <groupId>org.springframework.shell</groupId>
             <artifactId>spring-shell</artifactId>
-            <version>${spring.shell.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.1.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>4.1.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>4.1.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.1.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>4.1.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>4.1.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.1.2</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.1.2</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.10</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>codetrack</groupId>
+            <artifactId>codetrack-annotation</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>codetrack</groupId>
+            <artifactId>codetrack-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>codetrack</groupId>
+            <artifactId>codetrack-database</artifactId>
+            <version>${project.parent.version}</version>
         </dependency>
     </dependencies>
 

@@ -17,6 +17,8 @@
 
 package org.codetrack.shell.information;
 
+import org.codetrack.shell.ShellFileInfo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.shell.plugin.support.DefaultHistoryFileNameProvider;
@@ -31,6 +33,9 @@ import org.springframework.stereotype.Component;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class HistoryFileNameProvider extends DefaultHistoryFileNameProvider{
 
+    @Autowired
+    private ShellFileInfo shellFileInfo;
+
     /**
      * Access history file name. Is generated on the running folder
      *
@@ -38,7 +43,7 @@ public class HistoryFileNameProvider extends DefaultHistoryFileNameProvider{
      */
     @Override
     public String getHistoryFileName() {
-        return "codetrack.hist";
+        return shellFileInfo.getHistoryFileName();
     }
 
     /**
@@ -48,6 +53,6 @@ public class HistoryFileNameProvider extends DefaultHistoryFileNameProvider{
      */
     @Override
     public String getProviderName() {
-        return "Codetrack history provider";
+        return "codetrack history provider";
     }
 }
