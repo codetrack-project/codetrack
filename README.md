@@ -29,3 +29,4 @@ To execute codetrack-shell
     $> cd codetrack
     $> java -jar codetrack-shell/target/codetrack-shell-1.0-SNAPSHOT.jar
 
+CI with travis-ci.org
