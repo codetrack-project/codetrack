@@ -19,3 +19,13 @@ Track java language scanner processors
 ##codetrack-scanner-jsf
 Track JSF scanner processors
 
+To run first download and build project with:
+
+    $> git clone https://github.com/josecmoj/codetrack.git
+    $> mvn install
+    
+To execute codetrack-shell
+
+    $> cd codetrack
+    $> java -jar codetrack-shell/target/codetrack-shell-1.0-SNAPSHOT.jar
+
