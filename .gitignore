@@ -15,7 +15,7 @@ target/
 
 # IDE controller files
 .idea/
-*.iml
+*.imls
 
 # Logging files
 *.log
