@@ -17,15 +17,17 @@
 
 package org.codetrack.shell.information;
 
+import org.codetrack.shell.ShellApplicationInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.shell.plugin.support.DefaultBannerProvider;
 import org.springframework.stereotype.Component;
 
 /**
- * Provides the banner ASCII art for the name of application
+ * Provides the application banner ASCII art
  *
  * @author josecmoj at 19/04/15.
  */
@@ -35,9 +37,12 @@ public class BannerProvider extends DefaultBannerProvider {
 
     Logger logger = LoggerFactory.getLogger(BannerProvider.class);
 
+    @Autowired
+    private ShellApplicationInfo shellApplicationInfo;
+
     /**
      * Access banner ASCII art
-     * @return String with banner art
+     * @return String banner art
      */
     @Override
     public String getBanner() {
@@ -67,7 +72,7 @@ public class BannerProvider extends DefaultBannerProvider {
      */
     @Override
     public String getProviderName() {
-        return "Codetrack banner provider";
+        return "codetrack banner provider";
     }
 
     /**
@@ -77,7 +82,7 @@ public class BannerProvider extends DefaultBannerProvider {
      */
     @Override
     public String getVersion() {
-        return "V1.0";
+        return shellApplicationInfo.getVersion();
     }
 
     /**
@@ -87,6 +92,6 @@ public class BannerProvider extends DefaultBannerProvider {
      */
     @Override
     public String getWelcomeMessage() {
-        return "Welcome to Codetrack tool";
+        return shellApplicationInfo.getWelcome();
     }
 }

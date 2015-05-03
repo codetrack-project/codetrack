@@ -15,8 +15,10 @@ target/
 
 # IDE controller files
 .idea/
-*.iml
+*.imls
 
 # Logging files
 *.log
 *.hist
+
+codetrack-parent/codetrack-parent.iml
