@@ -130,18 +130,25 @@ public class DatabaseCommand implements CommandMarker {
             @CliOption(key = {"path"}, mandatory = false, specifiedDefaultValue = "", help = "The connection url database")
             final String path) throws DatabaseError {
 
-        DatabaseParameters databaseParameters;
+        DatabaseParameters.Builder builder = DatabaseParameters.newBuilder();
+
+        builder.name(name)
+                .user("")
+                .password("")
+                .engine(DatabaseEngine.FILE)
+                .url("")
+                .path(databaseConfiguration.getCodetrackConfigPath());
 
         if (Strings.isNullOrEmpty(path))
-            databaseParameters = new DatabaseParameters(name, "", "", DatabaseEngine.FILE, "", databaseConfiguration.getCodetrackConfigPath());
+            builder.path(databaseConfiguration.getCodetrackConfigPath());
         else
-            databaseParameters = new DatabaseParameters(name, "", "", DatabaseEngine.FILE, "", path);
+            builder.path(path);
 
-        databaseManager.register(databaseParameters);
-        databaseManager.uses(databaseParameters.getName());
+        databaseManager.register(builder.build());
+        databaseManager.uses(name);
         databaseManager.setProjectDescription(description);
 
-        return "Database " + name + " on " + databaseParameters.getPath() + " is registered!";
+        return "Database " + name + " is registered!";
 
     }
 
