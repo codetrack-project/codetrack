@@ -14,21 +14,16 @@
  *  limitations under the License.
  */
 
-package org.codetrack.tracker;
+package org.codetrack.core.event;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.context.ApplicationListener;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = CodetrackTrackerApplication.class)
-@WebAppConfiguration
-public class CodetrackTrackerApplicationTests {
+/**
+ * Define CommandEvent listener
+ *
+ * @author josecmoj at 23/04/15.
+ */
+public abstract class CommandEventListener<T extends CommandEvent> implements ApplicationListener {
 
-	@Test
-	public void contextLoads() {
-	}
 
 }

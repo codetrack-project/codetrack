@@ -20,3 +20,5 @@ target/
 # Logging files
 *.log
 *.hist
+
+codetrack-parent/codetrack-parent.iml

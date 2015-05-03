@@ -14,15 +14,21 @@
  *  limitations under the License.
  */
 
-package org.codetrack.tracker;
+package org.codetrack.core.event;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationEvent;
 
-@SpringBootApplication
-public class CodetrackTrackerApplication {
+/**
+ * @author josecmoj at 22/04/15.
+ */
+public class CommandEvent extends ApplicationEvent {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CodetrackTrackerApplication.class, args);
+    /**
+     * Create a new ApplicationEvent.
+     *
+     * @param source the component that published the event (never {@code null})
+     */
+    public CommandEvent(Object source) {
+        super(source);
     }
 }
