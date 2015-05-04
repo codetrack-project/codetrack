@@ -29,7 +29,6 @@
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.5" level="project" />
-    <orderEntry type="library" name="Maven: codetrack:codetrack-annotation:1.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="codetrack-core" />
     <orderEntry type="module" module-name="codetrack-database" />
     <orderEntry type="library" name="Maven: commons-configuration:commons-configuration:1.6" level="project" />

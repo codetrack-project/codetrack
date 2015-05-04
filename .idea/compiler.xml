@@ -66,9 +66,16 @@
         <processorPath useClasspath="true" />
         <module name="codetrack-scanner-java" />
       </profile>
+      <profile default="false" name="Annotation profile for codetrack-core" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-core" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="codetrack" target="1.5" />
+      <module name="codetrack" target="1.7" />
       <module name="codetrack-annotation-java" target="1.7" />
       <module name="codetrack-annotation-jsf" target="1.7" />
       <module name="codetrack-core" target="1.7" />
