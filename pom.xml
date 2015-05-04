@@ -56,12 +56,12 @@
         <module>codetrack-parent</module>
         <module>codetrack-core</module>
         <module>codetrack-database</module>
-        <module>codetrack-shell</module>
         <module>codetrack-annotation-java</module>
         <module>codetrack-annotation-jsf</module>
         <module>codetrack-scanner-core</module>
         <module>codetrack-scanner-java</module>
         <module>codetrack-scanner-jsf</module>
+        <module>codetrack-shell</module>
     </modules>
 
 
