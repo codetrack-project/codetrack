@@ -17,6 +17,7 @@
 package org.codetrack.database.connection;
 
 import org.codetrack.database.DatabaseParameters;
+import org.codetrack.database.connection.file.FileDatabase;
 import org.codetrack.database.data.Database;
 
 /**
@@ -24,7 +25,7 @@ import org.codetrack.database.data.Database;
  *
  * @author josecmoj at 29/04/15.
  * @see DatabaseParameters
- * @see Database
+ * @see FileDatabase
  */
 public interface DatabaseConnection {
 
@@ -32,7 +33,7 @@ public interface DatabaseConnection {
      * Access database graph instance
      *
      * @return Database instance
-     * @see Database
+     * @see FileDatabase
      */
     Database getDatabase();
 
@@ -40,7 +41,7 @@ public interface DatabaseConnection {
      * Set a database graph instance
      *
      * @param database instance
-     * @see Database
+     * @see FileDatabase
      */
     void setDatabase(Database database);
 

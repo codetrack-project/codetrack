@@ -29,15 +29,15 @@ import java.util.Date;
  *
  * @author josecmoj at 02/05/15.
  * @see DatabaseConnection
- * @see Database
+ * @see FileDatabase
  * @see DatabaseParameters
  * @see FileDatabaseException
  */
 public class FileDatabaseConnection implements DatabaseConnection {
 
-    private static String DATABASE_EXTENSION = ".dat";
+    public static String DATABASE_EXTENSION = ".dat";
 
-    private static String FILE_SEPARATOR = System.getProperty("file.separator");
+    public static String FILE_SEPARATOR = System.getProperty("file.separator");
 
     /**
      * Database parameters information
@@ -80,6 +80,11 @@ public class FileDatabaseConnection implements DatabaseConnection {
     private String fileName;
 
     /**
+     * Codetrack base path name
+     */
+    private String pathName;
+
+    /**
      * Database graph instance
      */
     private Database database;
@@ -108,17 +113,20 @@ public class FileDatabaseConnection implements DatabaseConnection {
         this.databaseParameters = databaseParameters;
     }
 
-    /**
-     * This simulate a open database connection operation
-     * Set database file name to internal variable fileName
-     *
-     * @throws Exception
-     */
-    @Override
-    public void open() throws Exception {
+    public String getFileName() {
+        return fileName;
+    }
 
-        fileName = databaseParameters.getPath() + FILE_SEPARATOR + "databases" + FILE_SEPARATOR + databaseParameters.getName() + DATABASE_EXTENSION;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
 
+    public String getPathName() {
+        return pathName;
+    }
+
+    public void setPathName(String pathName) {
+        this.pathName = pathName;
     }
 
     /**
@@ -134,6 +142,20 @@ public class FileDatabaseConnection implements DatabaseConnection {
             output.close();
             output = null;
         }
+
+    }
+
+    /**
+     * This simulate a open database connection operation
+     * Set database file name to internal variable fileName
+     *
+     * @throws Exception
+     */
+    @Override
+    public void open() throws Exception {
+
+        setPathName(databaseParameters.getPath() + FILE_SEPARATOR + "databases" + FILE_SEPARATOR + databaseParameters.getName());
+        setFileName(getPathName() + DATABASE_EXTENSION);
 
     }
 
@@ -161,7 +183,7 @@ public class FileDatabaseConnection implements DatabaseConnection {
 
         // File not exist and database is not create yet
         if (this.database == null)
-            this.database = Database.newBuilder()
+            this.database = FileDatabase.newBuilder()
                     .name(databaseParameters.getName())
                     .lastUpdate(new Date())
                     .project(Project.newBuilder()
@@ -186,24 +208,27 @@ public class FileDatabaseConnection implements DatabaseConnection {
 
         File file = new File(fileName);
 
-        if (!file.exists()) {
+        try {
 
-            try {
+            if (!file.exists())
+                file.createNewFile();
 
-                if (file.createNewFile()) {
+            if (file.exists()) {
 
-                    outFile = new FileOutputStream(file);
-                    outBuffer = new BufferedOutputStream(outFile);
-                    output = new ObjectOutputStream(outBuffer);
+                outFile = new FileOutputStream(file);
+                outBuffer = new BufferedOutputStream(outFile);
+                output = new ObjectOutputStream(outBuffer);
 
-                    output.writeObject(database);
+                output.writeObject(database);
 
-                    close();
-                }
-            } catch (Exception ex) {
+                close();
 
-                throw new FileDatabaseException("Cannot create file " + file.getCanonicalPath());
-            }
+            } else
+                throw new FileDatabaseException("Cannot save file " + file.getAbsolutePath());
+
+        } catch (Exception ex) {
+
+            throw new FileDatabaseException("Cannot create file " + file.getCanonicalPath());
         }
 
     }
