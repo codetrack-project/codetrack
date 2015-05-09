@@ -23,7 +23,7 @@ import java.lang.annotation.*;
  * <p/>
  * Created by josecmoj on 14/04/15.
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Fixes {

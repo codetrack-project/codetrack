@@ -39,7 +39,7 @@ import java.lang.annotation.*;
  *
  * Created by josecmoj on 16/04/15.
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
 @Documented
 public @interface Cases {

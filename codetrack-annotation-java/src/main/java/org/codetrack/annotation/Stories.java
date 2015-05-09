@@ -39,7 +39,7 @@ import java.lang.annotation.*;
  *
  * @author josecmoj at 28/04/15.
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
 @Documented
 public @interface Stories {

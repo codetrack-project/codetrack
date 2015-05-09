@@ -23,7 +23,7 @@ import java.lang.annotation.*;
  * <p/>
  * Created by josecmoj on 18/04/15.
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 @Documented
 public @interface Rule {
@@ -34,6 +34,13 @@ public @interface Rule {
      * @return String rule id
      */
     String id();
+
+    /**
+     * Step execution of rule
+     *
+     * @return String step rule
+     */
+    String step() default "";
 
     /**
      * Rule case id

@@ -23,7 +23,7 @@ import java.lang.annotation.*;
  *
  * @author josecmoj josecmoj@gmail.com
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Artifacts {
