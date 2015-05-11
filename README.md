@@ -2,6 +2,8 @@
 
 The code tracking tool.
 
+[![Build Status](https://travis-ci.org/codetrack-project/codetrack.svg?branch=master)](https://travis-ci.org/codetrack-project/codetrack)
+
 #Modules
 ##codetrack-core
 Track core and base classes project
