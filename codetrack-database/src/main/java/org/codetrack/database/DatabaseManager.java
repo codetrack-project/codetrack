@@ -169,7 +169,7 @@ public class DatabaseManager {
      */
     private void open(DatabaseParameters usesDatabase) throws DatabaseError {
 
-        logger.info("Try open database " + usesDatabase.getName());
+        System.out.println("Try open database " + usesDatabase.getName());
 
         activeDatabaseParameters = usesDatabase;
 
@@ -189,7 +189,7 @@ public class DatabaseManager {
             }
         }
 
-        logger.info("Database " + activeDatabaseParameters.getName() + " is current active");
+        System.out.println("Database " + activeDatabaseParameters.getName() + " is current active");
     }
 
     /**
@@ -200,7 +200,8 @@ public class DatabaseManager {
     private void closeCurrent() throws DatabaseError {
 
         if (activeDatabaseParameters != null) {
-            logger.info("Closing database " + activeDatabaseParameters.getName());
+
+            System.out.println("Closing database " + activeDatabaseParameters.getName());
 
             try {
 
@@ -211,12 +212,15 @@ public class DatabaseManager {
                     databaseConnectionTable.remove(activeDatabaseParameters.getName());
                 }
 
+                System.out.println("Database " + activeDatabaseParameters.getName() + " is closed...");
+
                 activeDatabaseParameters = null;
 
             } catch (Exception e) {
                 throw new DatabaseError("Close database " + activeDatabaseParameters.getName() + " error", e, DatabaseError.DATABASE_ERROR_BASE);
             }
         }
+
 
     }
 
@@ -257,6 +261,8 @@ public class DatabaseManager {
                 databaseInfoTable.put(databaseParameters.getName(), databaseParameters);
                 databaseConfiguration.saveRegisteredDatabase(databaseParameters);
                 databaseConfiguration.saveDatabaseKey(databaseParameters.getName());
+
+                System.out.println("Database " + databaseParameters.getName() + " is now registered");
 
             }
 
