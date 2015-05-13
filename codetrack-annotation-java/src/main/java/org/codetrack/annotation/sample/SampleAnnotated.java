@@ -14,7 +14,9 @@
  *  limitations under the License.
  */
 
-package org.codetrack.annotation;
+package org.codetrack.annotation.sample;
+
+import org.codetrack.annotation.*;
 
 /**
  * Sample annotate class
@@ -33,7 +35,7 @@ public class SampleAnnotated {
     }
 
     @Rule(id = "RN23452", caseid = "UC1989")
-    @Fix(id = "4567", type = FixType.EXP)
+    @Fix(id = "4567", type = FixType.EXP, observation = "This fix is necesssary...")
     public void methodRuleAndFix(){
         System.out.println("methodRuleAndFix");
     }

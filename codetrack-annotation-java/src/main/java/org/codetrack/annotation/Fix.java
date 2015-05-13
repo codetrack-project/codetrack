@@ -42,5 +42,12 @@ public @interface Fix {
      */
     FixType type();
 
+    /**
+     * Fix optional observation
+     *
+     * @return String observation text
+     */
+    String observation() default "";
+
 
 }
