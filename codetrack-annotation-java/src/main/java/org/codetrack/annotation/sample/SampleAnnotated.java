@@ -35,7 +35,7 @@ public class SampleAnnotated {
     }
 
     @Rule(id = "RN23452", caseid = "UC1989")
-    @Fix(id = "4567", type = FixType.EXP, observation = "This fix is necesssary...")
+    @Fix(id = "4567", type = FixType.EXP, observation = "This fix is necessary...")
     public void methodRuleAndFix(){
         System.out.println("methodRuleAndFix");
     }
