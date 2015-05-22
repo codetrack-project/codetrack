@@ -21,10 +21,10 @@ import java.lang.annotation.*;
 /**
  * The rule annotation
  * <p/>
- * Created by josecmoj on 18/04/15.
+ * @author josecmoj on 18/04/15.
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Rule {
 
@@ -43,10 +43,9 @@ public @interface Rule {
     String step() default "";
 
     /**
-     * Rule case id
-     *
-     * @return String case id
+     * UseCase
+     * @return UseCase
      */
-    String caseid();
+    UseCase usecase() default @UseCase(id = "none");
 
 }

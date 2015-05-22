@@ -36,18 +36,19 @@ import java.lang.annotation.*;
 
 /**
  * The group use cases annotation
- *
- * Created by josecmoj on 16/04/15.
+ * <p/>
+ * @author josecmoj on 16/04/15.
+ * @see UseCase
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
-public @interface Cases {
+public @interface UseCases {
 
     /**
-     * List of Cases
+     * List of UseCases
      *
-     * @return Case array list
+     * @return array of {@link UseCase}
      */
-    Case[] cases();
+    UseCase[] cases();
 }

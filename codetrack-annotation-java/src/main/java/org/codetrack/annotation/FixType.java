@@ -18,8 +18,8 @@ package org.codetrack.annotation;
 
 /**
  * Enum indicate type of Fix
- * <p/>
- * Created by josecmoj on 14/04/15.
+ *  <p/>
+ * @author josecmoj on 14/04/15.
  */
 public enum FixType {
 

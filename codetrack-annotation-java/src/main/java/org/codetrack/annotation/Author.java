@@ -19,9 +19,9 @@ package org.codetrack.annotation;
 import java.lang.annotation.*;
 
 /**
- * This annotation indicate an Author in the code
+ * This annotation indicate an Author
  * <p/>
- * Created by josecmoj on 14/04/15.
+ * @author josecmoj on 14/04/15.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})

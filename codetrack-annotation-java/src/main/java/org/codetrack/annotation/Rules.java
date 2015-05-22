@@ -18,10 +18,22 @@ package org.codetrack.annotation;
 
 import java.lang.annotation.*;
 
+/**
+ * Group of Rules
+ * <p/>
+ *
+ * @author josecmoj 14/04/
+ * @see Rule
+ */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Rules {
 
+	/**
+	 * Rule list
+	 *
+	 * @return array of {@link Rule}
+	 */
 	Rule[] rule();
 }

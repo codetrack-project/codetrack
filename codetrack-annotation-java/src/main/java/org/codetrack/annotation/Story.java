@@ -36,11 +36,12 @@ import java.lang.annotation.*;
 
 /**
  * Indicate an Story definition
- *
+ * <p/>
  * @author josecmoj at 28/04/15.
+ * @see Revision
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Story {
 
@@ -61,7 +62,7 @@ public @interface Story {
     /**
      * List of revisions
      *
-     * @return array list of revisions
+     * @return array of {@link Revision}
      */
-    Revision[] revisions();
+    Revision[] revisions() default {};
 }

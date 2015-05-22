@@ -20,16 +20,21 @@ import java.lang.annotation.*;
 
 /**
  * This annotation indicate the use case class
- *
- * Created by josecmoj on 14/04/15.
+ * <p/>
+ * @author josecmoj on 14/04/15.
+ * @see Revision
+ * @see UseCase
+ * @see Cycle
+ * @see Iteration
+ * @see Sprint
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
 @Documented
-public @interface Case {
+public @interface UseCase {
 
     /**
-     * Case id
+     * UseCase id
      *
      * @return String case id
      */
@@ -38,8 +43,34 @@ public @interface Case {
     /**
      * Revision list
      *
-     * @return array of revision
+     * @return array of Revision
+     * @see Revision
      */
-    Revision[] revisions();
+    Revision[] revisions() default {};
+
+    /**
+     * Optional cycle
+     *
+     * @return Cycle
+     * @see Cycle
+     */
+    Cycle cycle() default @Cycle(id = "none");
+
+    /**
+     * Optional iteration
+     *
+     * @return Iteration
+     * @see Iteration
+     */
+    Iteration iteration() default @Iteration(id = "none");
+
+    /**
+     * Optional sprint
+     *
+     * @return Sprint
+     * @see Sprint
+     */
+    Sprint sprint() default @Sprint(id = "none");
+
 
 }

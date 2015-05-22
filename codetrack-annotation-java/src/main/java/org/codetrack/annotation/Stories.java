@@ -36,18 +36,19 @@ import java.lang.annotation.*;
 
 /**
  * The group of Story
- *
+ * <p/>
  * @author josecmoj at 28/04/15.
+ * @see Story
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Stories {
 
     /**
      * List of Story
      *
-     * @return array of Story
+     * @return array of {@link Story}
      */
     Story[] stories();
 }

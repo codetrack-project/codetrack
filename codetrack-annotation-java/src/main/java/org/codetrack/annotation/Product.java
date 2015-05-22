@@ -21,7 +21,8 @@ import java.lang.annotation.*;
 /**
  * The annotation used to indicate an product
  * <p/>
- * Created by josecmoj on 14/04/15.
+ * @author josecmoj on 14/04/15.
+ * @see UseCase
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
@@ -38,7 +39,7 @@ public @interface Product {
     /**
      * Use cases of Product
      *
-     * @return array of Case
+     * @return array of {@link UseCase}
      */
-    Case[] cases();
+    UseCase[] cases();
 }

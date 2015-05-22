@@ -21,12 +21,18 @@ import java.lang.annotation.*;
 /**
  * The group of fixes
  * <p/>
- * Created by josecmoj on 14/04/15.
+ * @author josecmoj on 14/04/15.
+ * @see Fix
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
 public @interface Fixes {
 
+	/**
+	 * Fix group
+	 *
+	 * @return array of {@link Fix}
+	 */
 	Fix[] fixes();
 }

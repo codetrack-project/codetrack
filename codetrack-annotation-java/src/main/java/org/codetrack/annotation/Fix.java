@@ -21,7 +21,8 @@ import java.lang.annotation.*;
 /**
  * The annotation indicate an fix error in the code
  * <p/>
- * Created by josecmoj on 14/04/15.
+ * @author josecmoj on 14/04/15.
+ * @see FixType
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
@@ -38,7 +39,7 @@ public @interface Fix {
     /**
      * Fix type
      *
-     * @return FixType of fix
+     * @return {@link FixType}
      */
     FixType type();
 
@@ -48,6 +49,31 @@ public @interface Fix {
      * @return String observation text
      */
     String observation() default "";
+
+    /**
+     * Optional cycle
+     *
+     * @return Cycle
+     * @see Cycle
+     */
+    Cycle cycle() default @Cycle(id = "none");
+
+    /**
+     * Optional iteration
+     *
+     * @return Iteration
+     * @see Iteration
+     */
+    Iteration iteration() default @Iteration(id = "none");
+
+    /**
+     * Optional sprint
+     *
+     * @return Sprint
+     * @see Sprint
+     */
+    Sprint sprint() default @Sprint(id = "none");
+
 
 
 }

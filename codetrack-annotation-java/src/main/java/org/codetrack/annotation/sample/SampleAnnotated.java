@@ -24,7 +24,7 @@ import org.codetrack.annotation.*;
  * Created by josecmoj on 14/04/15.
  */
 @Product(id = "RELEASE 02-70", cases = {
-        @Case(id = "UC1978", revisions = {})})
+        @UseCase(id = "UC1978", revisions = {})})
 @Artifacts(artifacts = {"application.properties", "methodRule.xhtml"})
 public class SampleAnnotated {
 

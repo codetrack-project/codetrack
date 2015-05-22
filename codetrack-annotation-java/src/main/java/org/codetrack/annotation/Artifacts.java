@@ -19,9 +19,9 @@ package org.codetrack.annotation;
 import java.lang.annotation.*;
 
 /**
- * This annotation links external artifacts to the class operation
- *
- * @author josecmoj josecmoj@gmail.com
+ * This annotation links external artifacts
+ * <p/>
+ * @author josecmoj on 14/04/15.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})

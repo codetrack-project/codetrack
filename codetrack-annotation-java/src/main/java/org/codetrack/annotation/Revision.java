@@ -20,8 +20,9 @@ import java.lang.annotation.*;
 
 /**
  * The annotation used to mark an revision
- *
- * Created by josecmoj on 14/04/15.
+ * <p/>
+ * @author josecmoj on 14/04/15.
+ * @see Author
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
@@ -52,7 +53,7 @@ public @interface Revision {
     /**
      * Author of revision
      *
-     * @return Author revision
+     * @return revision {@link Author}
      */
     Author author();
 }

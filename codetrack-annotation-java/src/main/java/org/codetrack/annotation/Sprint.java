@@ -3,26 +3,27 @@ package org.codetrack.annotation;
 import java.lang.annotation.*;
 
 /**
- * Indicate the iteration phase to answer the "when code is...?" question
- * <p/>
- * @author josecmoj at 20/05/15.
+ * Identify an Sprint
+ * </p>
+ *
+ * @author josecmoj at 22/05/15.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Documented
-public @interface Iteration {
+public @interface Sprint {
 
     /**
-     * Iteration id
+     * Sprint id
      *
-     * @return String iteration id
+     * @return String sprint id
      */
     String id();
 
     /**
-     * Iteration description option
+     * Sprint description option
      *
-     * @return
+     * @return String description
      */
     String description() default "";
 
