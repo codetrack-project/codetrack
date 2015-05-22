@@ -34,7 +34,7 @@ public @interface Product {
      * Product id
      * @return String com o id da solução
      */
-	String id();
+    String value();
 
     /**
      * Use cases of Product

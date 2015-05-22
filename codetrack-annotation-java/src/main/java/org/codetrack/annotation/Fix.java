@@ -56,7 +56,7 @@ public @interface Fix {
      * @return Cycle
      * @see Cycle
      */
-    Cycle cycle() default @Cycle(id = "none");
+    Cycle cycle() default @Cycle("none");
 
     /**
      * Optional iteration
@@ -64,7 +64,7 @@ public @interface Fix {
      * @return Iteration
      * @see Iteration
      */
-    Iteration iteration() default @Iteration(id = "none");
+    Iteration iteration() default @Iteration("none");
 
     /**
      * Optional sprint
@@ -72,7 +72,7 @@ public @interface Fix {
      * @return Sprint
      * @see Sprint
      */
-    Sprint sprint() default @Sprint(id = "none");
+    Sprint sprint() default @Sprint("none");
 
 
 

@@ -50,5 +50,5 @@ public @interface Stories {
      *
      * @return array of {@link Story}
      */
-    Story[] stories();
+    Story[] value();
 }

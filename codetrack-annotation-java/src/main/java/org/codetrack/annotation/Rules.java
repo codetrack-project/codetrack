@@ -35,5 +35,5 @@ public @interface Rules {
 	 *
 	 * @return array of {@link Rule}
 	 */
-	Rule[] rule();
+	Rule[] value();
 }

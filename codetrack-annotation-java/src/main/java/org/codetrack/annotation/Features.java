@@ -19,7 +19,7 @@ public @interface Features {
      *
      * @return {@link Feature}
      */
-    Feature[] features();
+    Feature[] value();
 
 
 }

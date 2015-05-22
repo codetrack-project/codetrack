@@ -50,5 +50,5 @@ public @interface UseCases {
      *
      * @return array of {@link UseCase}
      */
-    UseCase[] cases();
+    UseCase[] value();
 }

@@ -22,7 +22,7 @@ public @interface Requirement {
      *
      * @return String requirement id
      */
-    String id();
+    String value();
 
     /**
      * Requirement description
@@ -36,14 +36,14 @@ public @interface Requirement {
      *
      * @return UseCase
      */
-    UseCase usecase() default @UseCase(id = "none");
+    UseCase usecase() default @UseCase("none");
 
     /**
      * Story
      *
      * @return Story
      */
-    Story story() default @Story(id = "none");
+    Story story() default @Story("none");
 
 
 }

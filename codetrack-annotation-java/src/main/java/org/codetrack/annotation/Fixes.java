@@ -34,5 +34,5 @@ public @interface Fixes {
 	 *
 	 * @return array of {@link Fix}
 	 */
-	Fix[] fixes();
+	Fix[] value();
 }

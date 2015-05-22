@@ -53,7 +53,7 @@ public @interface Story {
      *
      * @return String story id
      */
-    String id();
+    String value();
 
     /**
      * Story description
@@ -75,7 +75,7 @@ public @interface Story {
      * @return Cycle
      * @see Cycle
      */
-    Cycle cycle() default @Cycle(id = "none");
+    Cycle cycle() default @Cycle("none");
 
     /**
      * Optional iteration
@@ -83,7 +83,7 @@ public @interface Story {
      * @return Iteration
      * @see Iteration
      */
-    Iteration iteration() default @Iteration(id = "none");
+    Iteration iteration() default @Iteration("none");
 
     /**
      * Optional sprint
@@ -91,5 +91,5 @@ public @interface Story {
      * @return Sprint
      * @see Sprint
      */
-    Sprint sprint() default @Sprint(id = "none");
+    Sprint sprint() default @Sprint("none");
 }

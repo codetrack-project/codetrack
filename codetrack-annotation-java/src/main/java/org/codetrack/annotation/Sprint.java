@@ -18,7 +18,7 @@ public @interface Sprint {
      *
      * @return String sprint id
      */
-    String id();
+    String value();
 
     /**
      * Sprint description option

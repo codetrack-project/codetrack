@@ -23,5 +23,5 @@ public @interface References {
      *
      * @return array of {@link Reference}
      */
-    Reference[] references();
+    Reference[] value();
 }

@@ -17,7 +17,7 @@ public @interface Cycle {
      *
      * @return String cycle id
      */
-    String id();
+    String value();
 
     /**
      * Cycle description option

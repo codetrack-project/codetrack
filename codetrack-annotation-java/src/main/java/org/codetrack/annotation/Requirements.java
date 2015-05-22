@@ -21,6 +21,6 @@ public @interface Requirements {
      *
      * @return array of {@link Requirement}
      */
-    Requirement[] requirements();
+    Requirement[] value();
 
 }

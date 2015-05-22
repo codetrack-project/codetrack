@@ -22,7 +22,7 @@ public @interface Feature {
      *
      * @return String id
      */
-    String id();
+    String value();
 
     /**
      * Feature description
@@ -36,12 +36,12 @@ public @interface Feature {
      *
      * @return UseCase
      */
-    UseCase usecase() default @UseCase(id = "none");
+    UseCase usecase() default @UseCase("none");
 
     /**
      * Optional Story
      *
      * @return Story
      */
-    Story story() default @Story(id = "none");
+    Story story() default @Story("none");
 }

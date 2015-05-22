@@ -17,7 +17,7 @@ public @interface Iteration {
      *
      * @return String iteration id
      */
-    String id();
+    String value();
 
     /**
      * Iteration description option

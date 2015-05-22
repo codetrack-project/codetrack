@@ -38,7 +38,7 @@ public @interface UseCase {
      *
      * @return String case id
      */
-    String id();
+    String value();
 
     /**
      * Revision list
@@ -54,7 +54,7 @@ public @interface UseCase {
      * @return Cycle
      * @see Cycle
      */
-    Cycle cycle() default @Cycle(id = "none");
+    Cycle cycle() default @Cycle("none");
 
     /**
      * Optional iteration
@@ -62,7 +62,7 @@ public @interface UseCase {
      * @return Iteration
      * @see Iteration
      */
-    Iteration iteration() default @Iteration(id = "none");
+    Iteration iteration() default @Iteration("none");
 
     /**
      * Optional sprint
@@ -70,7 +70,7 @@ public @interface UseCase {
      * @return Sprint
      * @see Sprint
      */
-    Sprint sprint() default @Sprint(id = "none");
+    Sprint sprint() default @Sprint("none");
 
 
 }

@@ -35,7 +35,7 @@ public @interface Rule {
      *
      * @return String rule id
      */
-    String id();
+    String value();
 
     /**
      * Step execution of rule
@@ -48,13 +48,13 @@ public @interface Rule {
      * UseCase
      * @return UseCase
      */
-    UseCase usecase() default @UseCase(id = "none");
+    UseCase usecase() default @UseCase("none");
 
     /**
      * Story
      *
      * @return Story
      */
-    Story story() default @Story(id = "none");
+    Story story() default @Story("none");
 
 }
