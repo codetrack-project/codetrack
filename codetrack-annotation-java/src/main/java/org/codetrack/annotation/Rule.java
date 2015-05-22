@@ -22,6 +22,8 @@ import java.lang.annotation.*;
  * The rule annotation
  * <p/>
  * @author josecmoj on 18/04/15.
+ * @see UseCase
+ * @see Story
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
@@ -47,5 +49,12 @@ public @interface Rule {
      * @return UseCase
      */
     UseCase usecase() default @UseCase(id = "none");
+
+    /**
+     * Story
+     *
+     * @return Story
+     */
+    Story story() default @Story(id = "none");
 
 }

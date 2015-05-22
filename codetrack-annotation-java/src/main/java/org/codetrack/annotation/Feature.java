@@ -32,30 +32,6 @@ public @interface Feature {
     String description() default "";
 
     /**
-     * Optional cycle
-     *
-     * @return Cycle
-     * @see Cycle
-     */
-    Cycle cycle() default @Cycle(id = "none");
-
-    /**
-     * Optional iteration
-     *
-     * @return Iteration
-     * @see Iteration
-     */
-    Iteration iteration() default @Iteration(id = "none");
-
-    /**
-     * Optional sprint
-     *
-     * @return Sprint
-     * @see Sprint
-     */
-    Sprint sprint() default @Sprint(id = "none");
-
-    /**
      * Optional UseCase
      *
      * @return UseCase

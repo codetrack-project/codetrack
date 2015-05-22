@@ -39,6 +39,9 @@ import java.lang.annotation.*;
  * <p/>
  * @author josecmoj at 28/04/15.
  * @see Revision
+ * @see Cycle
+ * @see Iteration
+ * @see Sprint
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
@@ -65,4 +68,28 @@ public @interface Story {
      * @return array of {@link Revision}
      */
     Revision[] revisions() default {};
+
+    /**
+     * Optional cycle
+     *
+     * @return Cycle
+     * @see Cycle
+     */
+    Cycle cycle() default @Cycle(id = "none");
+
+    /**
+     * Optional iteration
+     *
+     * @return Iteration
+     * @see Iteration
+     */
+    Iteration iteration() default @Iteration(id = "none");
+
+    /**
+     * Optional sprint
+     *
+     * @return Sprint
+     * @see Sprint
+     */
+    Sprint sprint() default @Sprint(id = "none");
 }

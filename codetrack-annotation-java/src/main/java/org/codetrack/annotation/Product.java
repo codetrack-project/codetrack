@@ -23,6 +23,7 @@ import java.lang.annotation.*;
  * <p/>
  * @author josecmoj on 14/04/15.
  * @see UseCase
+ * @see Story
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
@@ -31,7 +32,6 @@ public @interface Product {
 
     /**
      * Product id
-     *
      * @return String com o id da solução
      */
 	String id();
@@ -39,7 +39,16 @@ public @interface Product {
     /**
      * Use cases of Product
      *
-     * @return array of {@link UseCase}
+     * @return array of UseCase
+     * @see UseCase
      */
-    UseCase[] cases();
+    UseCase[] usecases() default {};
+
+    /**
+     * Stories of Product
+     *
+     * @return array of Story
+     * @see Story
+     */
+    Story[] stories() default {};
 }
