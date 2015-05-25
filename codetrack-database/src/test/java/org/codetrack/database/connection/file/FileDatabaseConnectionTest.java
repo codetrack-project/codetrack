@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 import org.codetrack.database.DatabaseEngine;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.database.data.Database;
+import org.codetrack.database.data.Project;
 import org.junit.Test;
 
 import java.io.File;
@@ -20,6 +21,10 @@ public class FileDatabaseConnectionTest extends TestCase {
     private static String DATABASE_TEXT_NAME = "DATABASE_NAME";
 
     private static String DATABASE_TEXT_NAME_MODIFIED = "DATABASE_NAME_MODIFIED";
+
+    private static String PROJECT_NAME = "Project Name";
+
+    private static String PROJECT_ID = "Project Id";
 
     private static String PROJECT_TEXT_DESCRIPTION = "PROJECT DESCRIPTION";
 
@@ -91,9 +96,13 @@ public class FileDatabaseConnectionTest extends TestCase {
         Database database = fileDatabaseConnection.getDatabase();
         assertNotNull(database);
         assertEquals(fileDatabaseConnection.getDatabaseParameters().getName(), database.getName());
-        assertEquals(fileDatabaseConnection.getDatabaseParameters().getName(), database.getProject().getName());
 
-        database.getProject().setDescription(PROJECT_TEXT_DESCRIPTION);
+        // Create and Add new project
+        database.addProject(Project.newBuilder()
+                .id(PROJECT_ID)
+                .name(PROJECT_NAME)
+                .description(PROJECT_TEXT_DESCRIPTION)
+                .build());
 
         // Testing first time save
         fileDatabaseConnection.save();
@@ -106,7 +115,7 @@ public class FileDatabaseConnectionTest extends TestCase {
         long firstModified = firstFile.lastModified();
 
         database.setName(DATABASE_TEXT_NAME_MODIFIED);
-        database.getProject().setDescription(PROJECT_TEXT_DESCRIPTION_MODIFIED);
+        database.selectProject(PROJECT_ID).setDescription(PROJECT_TEXT_DESCRIPTION_MODIFIED);
         fileDatabaseConnection.save();
 
         File savedFile = new File(expectedFileName);
@@ -122,7 +131,7 @@ public class FileDatabaseConnectionTest extends TestCase {
         newFileDatabaseConnection.load();
 
         assertFalse(newFileDatabaseConnection.getDatabase().getName().equals(DATABASE_TEXT_NAME));
-        assertTrue(newFileDatabaseConnection.getDatabase().getProject().getDescription().equals(PROJECT_TEXT_DESCRIPTION_MODIFIED));
+        assertTrue(newFileDatabaseConnection.getDatabase().selectProject(PROJECT_ID).getDescription().equals(PROJECT_TEXT_DESCRIPTION_MODIFIED));
 
         String state = newFileDatabaseConnection.state();
 

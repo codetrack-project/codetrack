@@ -23,4 +23,12 @@ public interface Database extends Serializable {
     boolean isModified();
 
     void markIsLoaded();
+
+    void addProject(Project project);
+
+    void removeProject(Project project);
+
+    Project findProject(String id);
+
+    Project selectProject(String id);
 }

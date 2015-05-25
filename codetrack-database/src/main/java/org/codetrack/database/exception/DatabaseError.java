@@ -71,6 +71,12 @@ public class DatabaseError extends NestedRuntimeException {
     public static final int DATABASE_DELETE_ERROR = DATABASE_LOAD_ERROR + 1;
 
     /**
+     * Delete database error code
+     */
+    public static final int DATABASE_PROJECT_NOT_FOUND = DATABASE_DELETE_ERROR + 1;
+
+
+    /**
      * Error code in instance exception
      */
     private int code;

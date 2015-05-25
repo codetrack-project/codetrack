@@ -19,7 +19,6 @@ package org.codetrack.database.connection.file;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.database.connection.DatabaseConnection;
 import org.codetrack.database.data.Database;
-import org.codetrack.database.data.Project;
 
 import java.io.*;
 import java.util.Date;
@@ -186,9 +185,6 @@ public class FileDatabaseConnection implements DatabaseConnection {
             this.database = FileDatabase.newBuilder()
                     .name(databaseParameters.getName())
                     .lastUpdate(new Date())
-                    .project(Project.newBuilder()
-                            .name(databaseParameters.getName())
-                            .build())
                     .build();
 
 

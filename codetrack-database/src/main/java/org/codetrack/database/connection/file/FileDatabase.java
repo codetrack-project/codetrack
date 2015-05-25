@@ -17,10 +17,13 @@
 package org.codetrack.database.connection.file;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Maps;
 import org.codetrack.database.data.Database;
 import org.codetrack.database.data.Project;
+import org.codetrack.database.exception.DatabaseError;
 
 import java.util.Date;
+import java.util.Map;
 
 /**
  * This is Database class graph object
@@ -37,9 +40,14 @@ public class FileDatabase implements Database {
     private String name;
 
     /**
-     * Reference to project
+     * Reference to selected project
      */
     private Project project;
+
+    /**
+     * Map of all database projects
+     */
+    private Map<String, Project> projectMap;
 
     /**
      * Last update date
@@ -52,27 +60,21 @@ public class FileDatabase implements Database {
     private transient int loadedHashCode;
 
     public FileDatabase() {
+        projectMap = Maps.newTreeMap();
     }
 
-    /**
-     * Constructor with builder instance
-     *
-     * @param builder
-     */
     private FileDatabase(Builder builder) {
         setLastUpdate(builder.lastUpdate);
         setName(builder.name);
-        setProject(builder.project);
+        projectMap = Maps.newTreeMap();
+        for (Project project : builder.projectMap.values())
+            addProject(project);
     }
 
-    /**
-     * Access to new Builder instance
-     *
-     * @return new Database.Builder instance
-     */
     public static Builder newBuilder() {
         return new Builder();
     }
+
 
     @Override
     public Date getLastUpdate() {
@@ -104,37 +106,6 @@ public class FileDatabase implements Database {
         this.project = project;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Database database = (Database) o;
-
-        if (getName() != null ? !getName().equals(database.getName()) : database.getName() != null) return false;
-        if (getProject() != null ? !getProject().equals(database.getProject()) : database.getProject() != null)
-            return false;
-        return !(getLastUpdate() != null ? !getLastUpdate().equals(database.getLastUpdate()) : database.getLastUpdate() != null);
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = getName() != null ? getName().hashCode() : 0;
-        result = 31 * result + (getProject() != null ? getProject().hashCode() : 0);
-        result = 31 * result + (getLastUpdate() != null ? getLastUpdate().hashCode() : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return Objects.toStringHelper(this)
-                .add("lastUpdate", lastUpdate)
-                .add("name", name)
-                .add("project", project)
-                .toString();
-    }
-
     /**
      * Indicate if Database graph is modified
      *
@@ -153,13 +124,69 @@ public class FileDatabase implements Database {
         loadedHashCode = hashCode();
     }
 
-    /**
-     * Builder class to Database
-     */
+    @Override
+    public void addProject(Project project) {
+        projectMap.put(project.getId(), project);
+        setLastUpdate(new Date());
+    }
+
+    @Override
+    public void removeProject(Project project) {
+        projectMap.remove(project);
+        setLastUpdate(new Date());
+    }
+
+    @Override
+    public Project findProject(String id) {
+
+        if (projectMap.containsKey(id))
+            return projectMap.remove(id);
+        else
+            throw new DatabaseError("Project " + id + " not found", DatabaseError.DATABASE_PROJECT_NOT_FOUND);
+
+    }
+
+    @Override
+    public Project selectProject(String id) {
+
+        if (projectMap.containsKey(id)) {
+            project = projectMap.get(id);
+            return project;
+        } else
+            throw new DatabaseError("Project " + id + " not found", DatabaseError.DATABASE_PROJECT_NOT_FOUND);
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FileDatabase that = (FileDatabase) o;
+        return Objects.equal(loadedHashCode, that.loadedHashCode) &&
+                Objects.equal(getName(), that.getName()) &&
+                Objects.equal(getProject(), that.getProject()) &&
+                Objects.equal(projectMap, that.projectMap) &&
+                Objects.equal(getLastUpdate(), that.getLastUpdate());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getName(), getLastUpdate());
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this)
+                .add("name", name)
+                .add("lastUpdate", lastUpdate)
+                .toString();
+    }
+
+
     public static final class Builder {
         private Date lastUpdate;
         private String name;
-        private Project project;
+        private Map<String, Project> projectMap = Maps.newTreeMap();
 
         private Builder() {
         }
@@ -174,15 +201,20 @@ public class FileDatabase implements Database {
             return this;
         }
 
-        public Builder project(final Project project) {
-            this.project = project;
+        public Builder projectMap(final Map<String, Project> projectMap) {
+            this.projectMap = projectMap;
+            return this;
+        }
+
+        public Builder putProject(Project project) {
+
+            this.projectMap.put(project.getId(), project);
+
             return this;
         }
 
         public FileDatabase build() {
-            FileDatabase ndb = new FileDatabase(this);
-            ndb.markIsLoaded();
-            return ndb;
+            return new FileDatabase(this);
         }
     }
 }
