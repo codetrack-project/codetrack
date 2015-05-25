@@ -26,6 +26,10 @@ import org.codetrack.annotation.*;
 @Product(value = "RELEASE 02-70", usecases = {
         @UseCase(value = "UC1978", revisions = {})})
 @Artifacts(artifacts = {"application.properties", "methodRule.xhtml"})
+@Requirements({
+        @Requirement(value = "RQ2032", story = @Story("ST0123")),
+        @Requirement("RQ345")
+})
 public class SampleAnnotated {
 
     @Rule(value = "RN12345", usecase = @UseCase("UC1978"))
@@ -54,6 +58,14 @@ public class SampleAnnotated {
     public void methodMultiFixes(){
         System.out.println("methodMultiFixes");
     }
+
+
+    @Reference(id = "ESPEC234", values = {"INTEGRATION SYS.DOC", "PAGE 10"})
+    @Feature(value = "FEAT-089", description = "Demonstrate the Feature tag", story = @Story("ST0123"))
+    public void methodFeature() {
+        System.out.println("methodFeature");
+    }
+
 
 
 }
