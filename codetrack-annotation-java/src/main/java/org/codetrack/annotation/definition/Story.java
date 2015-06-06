@@ -60,6 +60,13 @@ public @interface Story {
     Revision[] revisions() default {};
 
     /**
+     * Feature
+     *
+     * @return feature
+     */
+    Feature feature() default @Feature(id = "none");
+
+    /**
      * Optional cycle
      *
      * @return Cycle

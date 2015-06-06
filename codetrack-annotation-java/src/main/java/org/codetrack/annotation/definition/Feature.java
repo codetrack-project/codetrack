@@ -28,7 +28,6 @@ import java.lang.annotation.*;
  * <p/>
  *
  * @author josecmoj at 22/05/15.
- * @see UseCase
  * @see Cycle
  * @see Iteration
  * @see Sprint
@@ -60,16 +59,26 @@ public @interface Feature {
     Revision[] revisions() default {};
 
     /**
-     * Optional UseCase
+     * Optional cycle
      *
-     * @return UseCase
+     * @return Cycle
+     * @see Cycle
      */
-    UseCase usecase() default @UseCase(id = "none");
+    Cycle cycle() default @Cycle(id = "none");
 
     /**
-     * Optional Story
+     * Optional iteration
      *
-     * @return Story
+     * @return Iteration
+     * @see Iteration
      */
-    Story story() default @Story(id = "none");
+    Iteration iteration() default @Iteration(id = "none");
+
+    /**
+     * Optional sprint
+     *
+     * @return Sprint
+     * @see Sprint
+     */
+    Sprint sprint() default @Sprint(id = "none");
 }
