@@ -15,7 +15,9 @@
  *
  */
 
-package org.codetrack.annotation.identify;
+package org.codetrack.annotation.definition;
+
+import org.codetrack.annotation.identify.Author;
 
 import java.lang.annotation.*;
 

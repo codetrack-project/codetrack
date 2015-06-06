@@ -17,8 +17,6 @@
 
 package org.codetrack.annotation.definition;
 
-import org.codetrack.annotation.identify.Revision;
-
 import java.lang.annotation.*;
 
 /**

@@ -17,7 +17,6 @@
 
 package org.codetrack.annotation.definition;
 
-import org.codetrack.annotation.identify.Revision;
 import org.codetrack.annotation.temporal.Cycle;
 import org.codetrack.annotation.temporal.Iteration;
 import org.codetrack.annotation.temporal.Sprint;
