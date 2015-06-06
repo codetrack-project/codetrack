@@ -20,44 +20,19 @@ package org.codetrack.annotation.temporal;
 import java.lang.annotation.*;
 
 /**
- * Indicate the cycle development phase to answer the "when code is...?" question
- * <p/>
- * @author josecmoj at 20/05/15.
+ * Cycle group list
+ *
+ * @author josecmoj at 06/06/15.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.PACKAGE, ElementType.TYPE, ElementType.METHOD})
 @Documented
-public @interface Cycle {
+public @interface Cycles {
 
     /**
-     * Cycle id
+     * Cycle list
      *
-     * @return String cycle id
+     * @return array of {@link Cycle}
      */
-    String id();
-
-    /**
-     * Cycle description option
-     *
-     * @return String description
-     */
-    String description() default "";
-
-    /**
-     * Cycle start date
-     * Preferences to use the YYYY/MM/DD date format
-     *
-     * @return end date of Cycle
-     */
-    String startAt() default "";
-
-    /**
-     * Cycle end date
-     * Preferences to use the YYYY/MM/DD date format
-     *
-     * @return end date of Cycle
-     */
-    String endAt() default "";
-
-
+    Cycle[] value();
 }

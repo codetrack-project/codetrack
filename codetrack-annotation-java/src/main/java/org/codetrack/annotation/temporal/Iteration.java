@@ -59,4 +59,13 @@ public @interface Iteration {
      */
     String endAt() default "";
 
+    /**
+     * Cycle reference
+     *
+     * @return reference to {@link Cycle}
+     */
+    Cycle cycle() default @Cycle(id = "none");
+
+
+
 }
