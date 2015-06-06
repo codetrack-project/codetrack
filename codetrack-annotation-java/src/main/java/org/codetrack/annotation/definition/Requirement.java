@@ -17,6 +17,8 @@
 
 package org.codetrack.annotation.definition;
 
+import org.codetrack.annotation.identify.Revision;
+
 import java.lang.annotation.*;
 
 /**
@@ -47,6 +49,13 @@ public @interface Requirement {
      * @return String requirement description
      */
     String description() default "";
+
+    /**
+     * List of revisions
+     *
+     * @return array of {@link Revision}
+     */
+    Revision[] revisions() default {};
 
     /**
      * UseCase

@@ -17,6 +17,7 @@
 
 package org.codetrack.annotation.definition;
 
+import org.codetrack.annotation.identify.Revision;
 import org.codetrack.annotation.temporal.Cycle;
 import org.codetrack.annotation.temporal.Iteration;
 import org.codetrack.annotation.temporal.Sprint;
@@ -51,6 +52,13 @@ public @interface Feature {
      * @return String feature description
      */
     String description() default "";
+
+    /**
+     * List of revisions
+     *
+     * @return array of {@link Revision}
+     */
+    Revision[] revisions() default {};
 
     /**
      * Optional UseCase
