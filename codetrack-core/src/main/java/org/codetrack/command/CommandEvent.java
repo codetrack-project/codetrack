@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-package org.codetrack.core.event;
+package org.codetrack.command;
 
 import org.springframework.context.ApplicationEvent;
 

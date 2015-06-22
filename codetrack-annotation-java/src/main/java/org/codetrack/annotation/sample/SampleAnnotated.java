@@ -71,7 +71,7 @@ public class SampleAnnotated {
 
     @Iteration(id = "IT012")
     @Reference(id = "ESPEC234", values = {"INTEGRATION SYS.DOC", "PAGE 10"})
-    @Feature(id = "FEAT-089", description = "Demonstrate the Feature tag", story = @Story(id = "ST0123"))
+    @Feature(id = "FEAT-089", description = "Demonstrate the Feature tag")
     public void methodFeature() {
         System.out.println("methodFeature");
     }

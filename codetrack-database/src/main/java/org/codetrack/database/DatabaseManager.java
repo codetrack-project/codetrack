@@ -65,6 +65,14 @@ public class DatabaseManager {
         databaseInfoTable = databaseConfiguration.loadRegisteredDatabases();
     }
 
+    public DatabaseConfiguration getDatabaseConfiguration() {
+        return databaseConfiguration;
+    }
+
+    public void setDatabaseConfiguration(DatabaseConfiguration databaseConfiguration) {
+        this.databaseConfiguration = databaseConfiguration;
+    }
+
     /**
      * Get active database parameters
      *
@@ -99,7 +107,7 @@ public class DatabaseManager {
      * @return active DatabaseConnection instance
      */
     public DatabaseConnection getActiveDatabaseConnection() {
-        return databaseConnectionTable.get(activeDatabaseParameters.getName());
+        return (activeDatabaseParameters == null ? null: databaseConnectionTable.get(activeDatabaseParameters.getName()));
     }
 
     /**
@@ -146,7 +154,6 @@ public class DatabaseManager {
                 conn = createConnection(databaseInfoTable.get(name));
             }
             conn.open();
-            ;
             conn.delete();
 
             databaseConfiguration.removeConfiguration(name);
