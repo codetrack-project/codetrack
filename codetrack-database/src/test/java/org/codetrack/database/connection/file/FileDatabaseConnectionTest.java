@@ -1,10 +1,26 @@
+/*
+ *  Copyright 2015 the original author or authors members of codetrack.org
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ *
+ */
+
 package org.codetrack.database.connection.file;
 
 import junit.framework.TestCase;
 import org.codetrack.database.DatabaseEngine;
 import org.codetrack.database.DatabaseParameters;
-import org.codetrack.database.data.Database;
-import org.codetrack.database.data.Project;
+import org.codetrack.domain.data.Database;
 import org.junit.Test;
 
 import java.io.File;
@@ -22,9 +38,9 @@ public class FileDatabaseConnectionTest extends TestCase {
 
     private static String DATABASE_TEXT_NAME_MODIFIED = "DATABASE_NAME_MODIFIED";
 
-    private static String PROJECT_NAME = "Project Name";
+    private static String PROJECT_NAME = "FileProject Name";
 
-    private static String PROJECT_ID = "Project Id";
+    private static String PROJECT_ID = "FileProject Id";
 
     private static String PROJECT_TEXT_DESCRIPTION = "PROJECT DESCRIPTION";
 
@@ -98,7 +114,7 @@ public class FileDatabaseConnectionTest extends TestCase {
         assertEquals(fileDatabaseConnection.getDatabaseParameters().getName(), database.getName());
 
         // Create and Add new project
-        database.addProject(Project.newBuilder()
+        database.addProject(FileProject.newBuilder()
                 .id(PROJECT_ID)
                 .name(PROJECT_NAME)
                 .description(PROJECT_TEXT_DESCRIPTION)

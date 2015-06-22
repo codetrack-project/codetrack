@@ -11,6 +11,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="codetrack-annotation-java" />
+    <orderEntry type="module" module-name="codetrack-core" />
     <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell:1.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.3" level="project" />
     <orderEntry type="library" name="Maven: jline:jline:2.11" level="project" />

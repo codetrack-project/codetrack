@@ -1,108 +1,98 @@
 /*
- * Copyright 2015 the original author or authors members of codetrack.org
+ *  Copyright 2015 the original author or authors members of codetrack.org
  *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
  *
- *       http://www.apache.org/licenses/LICENSE-2.0
+ *        http://www.apache.org/licenses/LICENSE-2.0
  *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ *
  */
 
-/*
- * Copyright 2015 the original author or authors members of codetrack.org
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
-package org.codetrack.database.data;
+package org.codetrack.database.connection.file;
 
 import com.google.common.base.Objects;
-
-import java.io.Serializable;
+import org.codetrack.domain.data.Project;
 
 /**
- * Project class store all information about tracked project
+ * FileProject class store all information about tracked project
  *
  * @author josecmoj at 02/05/15.
  */
-public class Project implements Serializable {
+public class FileProject implements Project {
 
     private static final long serialVersionUID = -1L;
 
     /**
-     * Project Id
+     * FileProject Id
      */
     private String id;
 
     /**
-     * Project name
+     * FileProject name
      */
     private String name;
 
     /**
-     * Project description
+     * FileProject description
      */
     private String description;
 
-    public Project() {
+    public FileProject() {
     }
 
     /**
-     * Constructor with Project.Builder instance
+     * Constructor with FileProject.Builder instance
      *
      * @param builder instance
      */
-    private Project(Builder builder) {
+    private FileProject(Builder builder) {
         setDescription(builder.description);
         setId(builder.id);
         setName(builder.name);
     }
 
     /**
-     * Access to new Project.Builder instance
+     * Access to new FileProject.Builder instance
      *
-     * @return Project.Builder instance
+     * @return FileProject.Builder instance
      */
     public static Builder newBuilder() {
         return new Builder();
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
 
+    @Override
     public void setDescription(String description) {
         this.description = description;
     }
 
+    @Override
     public String getId() {
         return id;
     }
 
+    @Override
     public void setId(String id) {
         this.id = id;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
@@ -138,7 +128,7 @@ public class Project implements Serializable {
     }
 
     /**
-     * Project.Builder class
+     * FileProject.Builder class
      */
     public static final class Builder {
         private String description;
@@ -164,7 +154,7 @@ public class Project implements Serializable {
         }
 
         public Project build() {
-            return new Project(this);
+            return new FileProject(this);
         }
     }
 }
