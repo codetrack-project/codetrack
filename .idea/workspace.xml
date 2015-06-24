@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba182f84-0973-476a-8e6b-7db1c8751b84" name="Default" comment="Add org.codetrack.annotation.temporal package and move the temporal type annotations.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/docs/model/codetrack.vpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/docs/model/codetrack.vpp~1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
