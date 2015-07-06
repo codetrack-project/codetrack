@@ -20,19 +20,75 @@ package org.codetrack.domain.data;
 import java.io.Serializable;
 
 /**
+ * This interface define behavior of an Project instance
+ *
  * @author josecmoj at 22/06/15.
  */
+@org.codetrack.annotation.identify.Product(id = "codetrack-core")
+@org.codetrack.annotation.definition.Feature(id = "#4-DATABASE")
 public interface Project extends Serializable {
 
+    /**
+     * Access description information
+     *
+     * @return String description
+     */
     String getDescription();
 
+    /**
+     * Put description information
+     *
+     * @param description String information
+     */
     void setDescription(String description);
 
+    /**
+     * Access id of project
+     *
+     * @return String id
+     */
     String getId();
 
+    /**
+     * Configure id of project
+     *
+     * @param id String
+     */
     void setId(String id);
 
+    /**
+     * Access name of project
+     *
+     * @return String name
+     */
     String getName();
 
+    /**
+     * Configure name of project
+     * @param name String
+     */
     void setName(String name);
+
+    /**
+     * Find first ProjectItem related with id
+     *
+     * @param id String of ProjectItem
+     * @return ProjectItem instance founded or null if not found
+     */
+    ProjectItem findById(String id);
+
+    /**
+     * Add an ProjectItem instance in the project
+     * @param projectItem to remove
+     * @return this Project instance
+     */
+    Project add(ProjectItem projectItem);
+
+    /**
+     * Remove an ProjectItems instance of project
+     * @param projectItem to remove
+     * @return this Project instance
+     */
+    Project remove(ProjectItem projectItem);
+
 }

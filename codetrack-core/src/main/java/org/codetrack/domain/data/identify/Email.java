@@ -18,6 +18,7 @@
 package org.codetrack.domain.data.identify;
 
 
+import com.google.common.base.Objects;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
 
@@ -29,4 +30,36 @@ import org.codetrack.annotation.identify.Product;
 public class Email {
 
     private String address;
+
+    public Email(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Email)) return false;
+        Email email = (Email) o;
+        return Objects.equal(getAddress(), email.getAddress());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getAddress());
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this)
+                .add("address", address)
+                .toString();
+    }
 }

@@ -18,7 +18,12 @@
 package org.codetrack.database.connection.file;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Maps;
 import org.codetrack.domain.data.Project;
+import org.codetrack.domain.data.ProjectItem;
+
+import java.util.SortedMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * FileProject class store all information about tracked project
@@ -44,7 +49,11 @@ public class FileProject implements Project {
      */
     private String description;
 
+    private ConcurrentMap<Class,SortedMap<String, ProjectItem>> itemsMap;
+
     public FileProject() {
+
+        itemsMap = Maps.newConcurrentMap();
     }
 
     /**
@@ -157,4 +166,69 @@ public class FileProject implements Project {
             return new FileProject(this);
         }
     }
+
+    /**
+     * This method create instance of SortedMap if not
+     * exist in the project control itemMap
+     *
+     * @param projectItem
+     * @return SortedMap<String,ProjectItem>
+     */
+    private SortedMap<String,ProjectItem> lazyMap(ProjectItem projectItem){
+
+        SortedMap<String,ProjectItem> map = itemsMap.get(projectItem.getClass());
+
+        if (map == null) {
+            map = Maps.newTreeMap();
+            itemsMap.put(projectItem.getClass(), map);
+        }
+
+        return map;
+
+    }
+
+    @Override
+    public ProjectItem findById(String id) {
+
+        for(SortedMap<String,ProjectItem> map : itemsMap.values()){
+            if (map.containsKey(id))
+                return map.get(id);
+        }
+
+        return null;
+
+    }
+
+
+    @Override
+    public Project add(ProjectItem projectItem) {
+
+        SortedMap<String,ProjectItem> map = lazyMap(projectItem);
+
+        if (!map.containsKey(projectItem.getId()))
+            map.put(projectItem.getId(),projectItem);
+
+        return this;
+
+    }
+
+    @Override
+    public Project remove(ProjectItem projectItem) {
+
+        SortedMap<String,ProjectItem> map = itemsMap.get(projectItem.getClass());
+
+        if (map == null) {
+            map = Maps.newTreeMap();
+            itemsMap.put(projectItem.getClass(), map);
+            return this;
+        }
+
+        if (map.containsKey(projectItem.getId()))
+            map.remove(projectItem.getId());
+
+        return this;
+
+    }
+
+
 }

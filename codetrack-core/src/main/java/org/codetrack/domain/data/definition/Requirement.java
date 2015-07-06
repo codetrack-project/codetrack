@@ -49,7 +49,6 @@ public class Requirement extends Definition {
         return new Builder();
     }
 
-
     public static final class Builder {
         private Cycle cycle;
         private String id;

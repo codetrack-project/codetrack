@@ -21,6 +21,7 @@ import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
+import org.codetrack.domain.data.ProjectItem;
 import org.codetrack.domain.data.identify.Source;
 
 import java.util.Date;
@@ -34,40 +35,41 @@ import java.util.Map;
  */
 @Product(id = "codetrack-core")
 @Feature(id = "#4-DATABASE")
-public abstract class Temporal {
+public abstract class Temporal extends ProjectItem {
+
 
     /**
      * Id of temporal instance
      */
-    protected String id;
+    private String id;
 
     /**
      * Name of temporal instance
      */
 
-    protected String name;
+    private String name;
 
     /**
      * Description of temporal instance
      */
-    protected String description;
+    private String description;
 
     /**
      * Start date of temporal instance
      */
-    protected Date startAt;
+    private Date startAt;
 
     /**
      * End date of temporal instance
      */
-    protected Date endAt;
+    private Date endAt;
 
     /**
      * The sources references
      */
-    protected Map<String, Source> sources;
+    private Map<String, Source> sources;
 
-    public Temporal() {
+    Temporal() {
     }
 
     public String getDescription() {
@@ -86,6 +88,7 @@ public abstract class Temporal {
         this.endAt = endAt;
     }
 
+    @Override
     public String getId() {
         return id;
     }
@@ -174,5 +177,7 @@ public abstract class Temporal {
                 .add("startAt", startAt)
                 .toString();
     }
+
+
 
 }

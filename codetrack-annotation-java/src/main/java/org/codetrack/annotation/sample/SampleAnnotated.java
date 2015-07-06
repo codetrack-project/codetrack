@@ -34,7 +34,7 @@ import org.codetrack.annotation.temporal.Iteration;
 @Product(id = "RELEASE 02-70",
         usecases = @UseCases({
                 @UseCase(id = "UC1978", revisions = {})}))
-@Reference(id = "CONFIGFILE", value = "application.properties")
+@Reference(id = "CONFIGFILE", name = "application.properties")
 @Requirements({
         @Requirement(id = "RQ2032", story = @Story(id = "ST0123")),
         @Requirement(id = "RQ345")

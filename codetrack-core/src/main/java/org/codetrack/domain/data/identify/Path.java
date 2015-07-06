@@ -19,13 +19,14 @@ package org.codetrack.domain.data.identify;
 
 import com.google.common.base.Objects;
 import org.codetrack.annotation.definition.Feature;
+import org.codetrack.domain.data.ProjectItem;
 
 /**
  * @author josecmoj at 06/06/15.
  */
 @org.codetrack.annotation.identify.Product(id = "codetrack-core")
 @Feature(id = "#4-DATABASE")
-public class Path {
+public class Path extends ProjectItem {
 
     /**
      * Path id
@@ -49,6 +50,7 @@ public class Path {
         return new Builder();
     }
 
+    @Override
     public String getId() {
         return id;
     }

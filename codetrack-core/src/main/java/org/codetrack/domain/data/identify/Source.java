@@ -22,6 +22,7 @@ import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
 import org.codetrack.annotation.temporal.Cycle;
 import org.codetrack.annotation.temporal.Cycles;
+import org.codetrack.domain.data.ProjectItem;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -35,7 +36,7 @@ import java.util.Map;
 @Cycles({
         @Cycle(id = "1.1-RELEASE")
 })
-public class Source {
+public class Source extends ProjectItem {
 
     /**
      * Name of source
@@ -175,6 +176,11 @@ public class Source {
                 .add("marks", marks)
                 .add("type", type)
                 .toString();
+    }
+
+    @Override
+    public String getId() {
+        return url;
     }
 
     /**

@@ -33,7 +33,7 @@ import java.util.Map;
 @org.codetrack.annotation.definition.Feature(id = "#4-DATABASE")
 public class UseCase extends Definition {
 
-    protected Feature feature;
+    private Feature feature;
 
     public UseCase() {
         super();

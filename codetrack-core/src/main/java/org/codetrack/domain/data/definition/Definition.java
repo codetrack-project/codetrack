@@ -19,6 +19,7 @@ package org.codetrack.domain.data.definition;
 
 import com.google.common.base.Objects;
 import org.codetrack.annotation.identify.Product;
+import org.codetrack.domain.data.ProjectItem;
 import org.codetrack.domain.data.identify.Source;
 import org.codetrack.domain.data.temporal.Cycle;
 import org.codetrack.domain.data.temporal.Iteration;
@@ -31,7 +32,7 @@ import java.util.Map;
  */
 @Product(id = "codetrack-core")
 @org.codetrack.annotation.definition.Feature(id = "#4-DATABASE")
-public abstract class Definition {
+public abstract class Definition extends ProjectItem {
 
     protected String id;
 
@@ -72,6 +73,7 @@ public abstract class Definition {
         this.description = description;
     }
 
+    @Override
     public String getId() {
         return id;
     }

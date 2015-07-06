@@ -17,8 +17,66 @@
 
 package org.codetrack.domain.repository;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
+import org.codetrack.domain.data.Project;
+import org.codetrack.domain.exception.CanNotFoundData;
+import org.codetrack.domain.exception.CanNotRemoveData;
+import org.codetrack.domain.exception.CanNotSaveData;
+
+import java.util.List;
+
 /**
- * @author josecmoj at 29/05/15.
+ * Repository interface defines access to Project data
+ *
+ * @author josecmoj at 04/07/15.
+ * @see Project
  */
-public interface ProjectRepository<Project> extends BaseRepository {
+@Product(id = "codetrack-core")
+@Feature(id = "#4-DATABASE")
+public interface ProjectRepository {
+
+    /**
+     * Save the Project instance
+     *
+     * @param project instance to be saved
+     * @return the Project instance saved
+     * @throws CanNotSaveData if is not possible save Project instance
+     */
+    Project save(Project project) throws CanNotSaveData;
+
+    /**
+     * Remove an Project instance from graph
+     *
+     * @param project instance to be removed
+     * @return the removed Project instance
+     * @throws CanNotRemoveData if is not possible to remove Project instance
+     */
+    Project remove(Project project) throws CanNotRemoveData;
+
+    /**
+     * Find an Project by Id
+     *
+     * @param id to be find
+     * @return the founded Project instance
+     * @throws CanNotFoundData if not found an Project instance
+     */
+    Project findById(String id) throws CanNotFoundData;
+
+    /**
+     * Find an Project by Name (exact)
+     *
+     * @param name to be find
+     * @return the founded Project instance
+     * @throws CanNotFoundData if not found an Project instance
+     */
+    Project findByName(String name) throws CanNotFoundData;
+
+    /**
+     * Get all Project instances
+     *
+     * @return list of Projects
+     */
+    List<Project> allProjects() throws CanNotFoundData;
+
 }

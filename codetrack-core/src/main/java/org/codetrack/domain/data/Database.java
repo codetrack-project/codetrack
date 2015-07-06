@@ -17,12 +17,17 @@
 
 package org.codetrack.domain.data;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
+
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author josecmoj at 05/05/15.
  */
+@Product(id = "codetrack-core")
+@Feature(id = "#4-DATABASE")
 public interface Database extends Serializable {
 
     Date getLastUpdate();

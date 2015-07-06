@@ -15,23 +15,35 @@
  *
  */
 
-package org.codetrack.domain.repository;
+package org.codetrack.domain.data;
 
-import java.util.List;
-import java.util.SortedMap;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
+
+import java.io.Serializable;
 
 /**
- * @author josecmoj at 29/05/15.
+ * All items in the project extends of this class
+ *
+ * @author josecmoj at 25/06/15.
  */
-public interface BaseRepository<T> {
+@Product(id = "codetrack-core")
+@Feature(id = "#4-DATABASE")
+public abstract class ProjectItem implements Serializable {
 
-    SortedMap<String, T> mapAll();
+    private Project project;
 
-    List<T> listAll();
+    public ProjectItem() {
+    }
 
-    T findById(String id);
+    public Project getProject() {
+        return this.project;
+    }
 
-    T findByName(String name);
+    public void setProject(Project project){
+        this.project = project;
+    }
 
+    public abstract String getId();
 
 }

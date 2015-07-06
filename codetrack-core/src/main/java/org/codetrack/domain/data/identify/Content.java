@@ -18,14 +18,16 @@
 package org.codetrack.domain.data.identify;
 
 import com.google.common.base.Objects;
+import com.google.common.base.Strings;
 import org.codetrack.annotation.definition.Feature;
+import org.codetrack.domain.data.ProjectItem;
 
 /**
  * @author josecmoj at 08/06/15.
  */
 @org.codetrack.annotation.identify.Product(id = "codetrack-core")
 @Feature(id = "#4-DATABASE")
-public class Content {
+public class Content extends ProjectItem{
 
     /**
      * Content path
@@ -101,6 +103,11 @@ public class Content {
                 .add("path", path)
                 .add("name", name)
                 .toString();
+    }
+
+    @Override
+    public String getId() {
+        return this.name + ((this.path != null) && (!Strings.isNullOrEmpty(this.path.getUrl())) ? this.path.getUrl() : "");
     }
 
     /**

@@ -38,7 +38,7 @@ public class Sprint extends Temporal {
     /**
      * Reference to Cycle (optional)
      */
-    protected Cycle cycle;
+    private Cycle cycle;
 
     public Sprint() {
         super();
@@ -58,7 +58,13 @@ public class Sprint extends Temporal {
         return new Builder();
     }
 
-    public Cycle getCycle() {
+    public static Builder newBuilder(Sprint copy) {
+        Builder builder = new Builder();
+        builder.cycle = copy.cycle;
+        return builder;
+    }
+
+    private Cycle getCycle() {
         return cycle;
     }
 
@@ -83,6 +89,7 @@ public class Sprint extends Temporal {
     }
 
     public static final class Builder {
+
         private String description;
         private String id;
         private String name;

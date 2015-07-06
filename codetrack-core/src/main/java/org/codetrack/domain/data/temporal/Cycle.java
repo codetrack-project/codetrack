@@ -40,14 +40,14 @@ public class Cycle extends Temporal {
     /**
      * Map of Iteration in the Cycle
      */
-    protected Map<String, Iteration> iterations;
+    private Map<String, Iteration> iterations;
 
     /**
      * Map of Sprint in the Cycle
      */
-    protected Map<String, Sprint> sprints;
+    private Map<String, Sprint> sprints;
 
-    public Cycle() {
+    Cycle() {
         super();
     }
 

@@ -20,13 +20,14 @@ package org.codetrack.domain.data.identify;
 import com.google.common.base.Objects;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
+import org.codetrack.domain.data.ProjectItem;
 
 /**
  * @author josecmoj at 05/06/15.
  */
 @Product(id = "codetrack-core")
 @Feature(id = "#4-DATABASE")
-public class Mark {
+public class Mark extends ProjectItem{
 
     private String id;
 
@@ -55,6 +56,7 @@ public class Mark {
         this.description = description;
     }
 
+    @Override
     public String getId() {
         return id;
     }

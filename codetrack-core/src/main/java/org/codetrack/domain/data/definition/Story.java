@@ -33,7 +33,7 @@ import java.util.Map;
 @org.codetrack.annotation.definition.Feature(id = "#4-DATABASE")
 public class Story extends Definition {
 
-    protected Feature feature;
+    private Feature feature;
 
     public Story() {
         super();
@@ -62,11 +62,11 @@ public class Story extends Definition {
         return Objects.equal(getFeature(), story.getFeature());
     }
 
-    public Feature getFeature() {
+    private Feature getFeature() {
         return feature;
     }
 
-    public void setFeature(Feature feature) {
+    private void setFeature(Feature feature) {
         this.feature = feature;
     }
 

@@ -75,16 +75,16 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="codetrack" target="1.7" />
-      <module name="codetrack-annotation-java" target="1.7" />
-      <module name="codetrack-annotation-jsf" target="1.7" />
-      <module name="codetrack-core" target="1.7" />
-      <module name="codetrack-database" target="1.7" />
+      <module name="codetrack" target="1.8" />
+      <module name="codetrack-annotation-java" target="1.8" />
+      <module name="codetrack-annotation-jsf" target="1.8" />
+      <module name="codetrack-core" target="1.8" />
+      <module name="codetrack-database" target="1.8" />
       <module name="codetrack-parent" target="1.7" />
-      <module name="codetrack-scanner-core" target="1.7" />
-      <module name="codetrack-scanner-java" target="1.7" />
-      <module name="codetrack-scanner-jsf" target="1.7" />
-      <module name="codetrack-shell" target="1.7" />
+      <module name="codetrack-scanner-core" target="1.8" />
+      <module name="codetrack-scanner-java" target="1.8" />
+      <module name="codetrack-scanner-jsf" target="1.8" />
+      <module name="codetrack-shell" target="1.8" />
       <module name="codetrack-tracker" target="1.7" />
     </bytecodeTargetLevel>
   </component>

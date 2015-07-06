@@ -15,17 +15,30 @@
  *
  */
 
-package org.codetrack.domain.data.identify;
-
-import org.codetrack.annotation.definition.Feature;
-import org.codetrack.annotation.identify.Product;
+package org.codetrack.domain.exception;
 
 /**
- * @author josecmoj at 29/05/15.
+ * @author josecmoj at 30/06/15.
  */
-@Product(id = "codetrack-core")
-@Feature(id = "#4-DATABASE")
-public class Project {
+public class CanNotSaveData extends RuntimeException {
 
+    public CanNotSaveData() {
+        super();
+    }
 
+    public CanNotSaveData(String message) {
+        super(message);
+    }
+
+    public CanNotSaveData(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public CanNotSaveData(Throwable cause) {
+        super(cause);
+    }
+
+    protected CanNotSaveData(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
 }

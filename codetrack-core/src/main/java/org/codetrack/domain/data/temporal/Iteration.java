@@ -39,7 +39,7 @@ public class Iteration extends Temporal {
     /**
      * Reference to Cycle (optional)
      */
-    protected Cycle cycle;
+    private Cycle cycle;
 
     public Iteration() {
         super();

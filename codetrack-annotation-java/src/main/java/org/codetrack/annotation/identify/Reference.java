@@ -42,11 +42,11 @@ public @interface Reference {
     String id();
 
     /**
-     * Reference value
+     * Reference name
      *
      * @return String values
      */
-    String value() default "";
+    String name() default "";
 
     /**
      * Reference values
