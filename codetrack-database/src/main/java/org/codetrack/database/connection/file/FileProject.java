@@ -67,7 +67,8 @@ public class FileProject implements Project {
         setDescription(builder.description);
         setId(builder.id);
         setName(builder.name);
-        builder.database.addProject(this);
+        if (builder.database != null)
+            builder.database.addProject(this);
     }
 
     /**
