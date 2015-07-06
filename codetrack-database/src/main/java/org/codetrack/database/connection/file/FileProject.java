@@ -19,6 +19,7 @@ package org.codetrack.database.connection.file;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
+import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
 import org.codetrack.domain.data.ProjectItem;
 
@@ -62,9 +63,11 @@ public class FileProject implements Project {
      * @param builder instance
      */
     private FileProject(Builder builder) {
+        itemsMap = Maps.newConcurrentMap();
         setDescription(builder.description);
         setId(builder.id);
         setName(builder.name);
+        builder.database.addProject(this);
     }
 
     /**
@@ -137,12 +140,91 @@ public class FileProject implements Project {
     }
 
     /**
+     * This method create instance of SortedMap if not
+     * exist in the project control itemMap
+     *
+     * @param projectItem instance
+     * @return SortedMap<String,ProjectItem> instance
+     */
+    private SortedMap<String, ProjectItem> lazyMap(ProjectItem projectItem) {
+
+        SortedMap<String, ProjectItem> map = itemsMap.get(projectItem.getClass());
+
+        if (map == null) {
+            map = Maps.newTreeMap();
+            itemsMap.put(projectItem.getClass(), map);
+        }
+
+        return map;
+
+    }
+
+    /**
+     * Find an ProjectItem instance by name
+     * @param id String of ProjectItem
+     * @return ProjectItem instance. Null if not found
+     */
+    @Override
+    public ProjectItem findById(String id) {
+
+        for (SortedMap<String, ProjectItem> map : itemsMap.values()) {
+            if (map.containsKey(id))
+                return map.get(id);
+        }
+
+        return null;
+
+    }
+
+    /**
+     * Add an ProjectItem instance in to project
+     * @param projectItem to remove
+     * @return this Project
+     */
+    @Override
+    public Project add(ProjectItem projectItem) {
+
+        SortedMap<String, ProjectItem> map = lazyMap(projectItem);
+
+        if (!map.containsKey(projectItem.getId()))
+            map.put(projectItem.getId(), projectItem);
+
+        return this;
+
+    }
+
+    /**
+     * Remove an ProjectItem instance of project
+     *
+     * @param projectItem to remove
+     * @return this project
+     */
+    @Override
+    public Project remove(ProjectItem projectItem) {
+
+        SortedMap<String, ProjectItem> map = itemsMap.get(projectItem.getClass());
+
+        if (map == null) {
+            map = Maps.newTreeMap();
+            itemsMap.put(projectItem.getClass(), map);
+            return this;
+        }
+
+        if (map.containsKey(projectItem.getId()))
+            map.remove(projectItem.getId());
+
+        return this;
+
+    }
+
+    /**
      * FileProject.Builder class
      */
     public static final class Builder {
         private String description;
         private String id;
         private String name;
+        private Database database;
 
         private Builder() {
         }
@@ -162,71 +244,15 @@ public class FileProject implements Project {
             return this;
         }
 
-        public Project build() {
-            return new FileProject(this);
-        }
-    }
-
-    /**
-     * This method create instance of SortedMap if not
-     * exist in the project control itemMap
-     *
-     * @param projectItem
-     * @return SortedMap<String,ProjectItem>
-     */
-    private SortedMap<String,ProjectItem> lazyMap(ProjectItem projectItem){
-
-        SortedMap<String,ProjectItem> map = itemsMap.get(projectItem.getClass());
-
-        if (map == null) {
-            map = Maps.newTreeMap();
-            itemsMap.put(projectItem.getClass(), map);
-        }
-
-        return map;
-
-    }
-
-    @Override
-    public ProjectItem findById(String id) {
-
-        for(SortedMap<String,ProjectItem> map : itemsMap.values()){
-            if (map.containsKey(id))
-                return map.get(id);
-        }
-
-        return null;
-
-    }
-
-
-    @Override
-    public Project add(ProjectItem projectItem) {
-
-        SortedMap<String,ProjectItem> map = lazyMap(projectItem);
-
-        if (!map.containsKey(projectItem.getId()))
-            map.put(projectItem.getId(),projectItem);
-
-        return this;
-
-    }
-
-    @Override
-    public Project remove(ProjectItem projectItem) {
-
-        SortedMap<String,ProjectItem> map = itemsMap.get(projectItem.getClass());
-
-        if (map == null) {
-            map = Maps.newTreeMap();
-            itemsMap.put(projectItem.getClass(), map);
+        public Builder database(Database database) {
+            this.database = database;
             return this;
         }
 
-        if (map.containsKey(projectItem.getId()))
-            map.remove(projectItem.getId());
+        public FileProject build() {
+            return new FileProject(this);
+        }
 
-        return this;
 
     }
 
