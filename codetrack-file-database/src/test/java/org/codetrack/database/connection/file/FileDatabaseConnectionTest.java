@@ -115,49 +115,5 @@ public class FileDatabaseConnectionTest extends TestCase {
 
 
     }
-
-    @Test
-    public void testReopen() throws Exception {
-
-        databaseManager.uses(databaseParameters.getName());
-
-        DatabaseConnection databaseConnection = databaseManager.getActiveDatabaseConnection();
-        assertNotNull(databaseConnection);
-
-        assertTrue(databaseConnection instanceof FileDatabaseConnection);
-
-        FileDatabaseConnection newFileDatabaseConnection = (FileDatabaseConnection) databaseConnection;
-
-        String expectedFileName = newFileDatabaseConnection.getDatabaseParameters().getPath()
-                + FileTestConfiguration.FILE_SEPARATOR
-                + "databases"
-                + FileTestConfiguration.FILE_SEPARATOR
-                + newFileDatabaseConnection.getDatabaseParameters().getName()
-                + FileDatabaseConnection.DATABASE_EXTENSION;
-
-        assertNotNull(newFileDatabaseConnection.getFileName());
-        assertEquals(newFileDatabaseConnection.getFileName(), expectedFileName);
-
-        newFileDatabaseConnection.open();
-        newFileDatabaseConnection.load();
-
-        assertFalse(newFileDatabaseConnection.getDatabase().getName().equals(FileTestConfiguration.DATABASE_TEXT_NAME));
-        assertTrue(newFileDatabaseConnection.getDatabase().selectProject(FileTestConfiguration.PROJECT_ID).getDescription().equals(FileTestConfiguration.PROJECT_TEXT_DESCRIPTION_MODIFIED));
-
-        String state = newFileDatabaseConnection.state();
-
-        assertTrue(state.contains("database"));
-        assertTrue(state.contains("engine"));
-        assertTrue(state.contains("file"));
-        assertTrue(state.contains("size"));
-
-        newFileDatabaseConnection.close();
-        newFileDatabaseConnection.delete();
-
-        File fileDeleted = new File(expectedFileName);
-
-        assertFalse(fileDeleted.exists());
-
-    }
-
+    
 }
