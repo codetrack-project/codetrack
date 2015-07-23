@@ -75,20 +75,20 @@ public interface Project extends Serializable {
      * @param id String of ProjectItem
      * @return ProjectItem instance founded or null if not found
      */
-    ProjectItem findById(String id);
+    //ProjectItem findById(String id);
 
     /**
      * Add an ProjectItem instance in the project
      * @param projectItem to remove
      * @return this Project instance
      */
-    Project add(ProjectItem projectItem);
+    //Project add(ProjectItem projectItem);
 
     /**
      * Remove an ProjectItems instance of project
      * @param projectItem to remove
      * @return this Project instance
      */
-    Project remove(ProjectItem projectItem);
+    //Project remove(ProjectItem projectItem);
 
 }

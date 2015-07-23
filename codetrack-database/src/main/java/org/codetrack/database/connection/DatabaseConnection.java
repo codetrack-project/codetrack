@@ -18,15 +18,15 @@
 package org.codetrack.database.connection;
 
 import org.codetrack.database.DatabaseParameters;
-import org.codetrack.database.connection.file.FileDatabase;
 import org.codetrack.domain.data.Database;
+import org.codetrack.domain.data.Project;
+import org.codetrack.repository.Repository;
 
 /**
  * Interface to database connection
  *
  * @author josecmoj at 29/04/15.
  * @see DatabaseParameters
- * @see FileDatabase
  */
 public interface DatabaseConnection {
 
@@ -34,7 +34,6 @@ public interface DatabaseConnection {
      * Access database graph instance
      *
      * @return Database instance
-     * @see FileDatabase
      */
     Database getDatabase();
 
@@ -42,7 +41,6 @@ public interface DatabaseConnection {
      * Set a database graph instance
      *
      * @param database instance
-     * @see FileDatabase
      */
     void setDatabase(Database database);
 
@@ -103,5 +101,22 @@ public interface DatabaseConnection {
      * @return String with status information
      */
     String state();
+
+    /**
+     * Access the repository factory
+     *
+     * @return instance of DatabaseRepositoryFactory
+     */
+    DatabaseRepositoryFactory getRepositoryFactory();
+
+    /**
+     * Get a DatabaseRepositoryFactory instance to handle Item
+     *
+     * @param project - project instance to get repository
+     * @param <E> - type of item to handle
+     * @return Repository instance
+     */
+    <E> Repository<E> getRepository(Project project);
+
 
 }

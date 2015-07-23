@@ -17,12 +17,11 @@
 package org.codetrack.database;
 
 import org.codetrack.database.connection.DatabaseConnection;
-import org.codetrack.database.connection.file.FileDatabaseConnection;
 import org.codetrack.database.exception.DatabaseError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
@@ -34,7 +33,7 @@ import java.util.Map;
  *
  * @author josecmoj at 25/04/15.
  */
-@Component
+@Service
 public class DatabaseManager {
 
     @Autowired
@@ -56,6 +55,8 @@ public class DatabaseManager {
      * Active connection map
      */
     private Hashtable<String, DatabaseConnection> databaseConnectionTable = new Hashtable<>();
+
+    private Hashtable<DatabaseEngine, DatabaseConnectionFactory> databaseConnectionFactoryTable = new Hashtable<>();
 
     /**
      * Load an initialize data
@@ -239,14 +240,12 @@ public class DatabaseManager {
      */
     private DatabaseConnection createConnection(DatabaseParameters databaseParameters) {
 
-        switch (databaseParameters.getEngine()) {
+        DatabaseConnectionFactory factory = databaseConnectionFactoryTable.get(databaseParameters.getEngine());
 
-            case FILE:
-                return new FileDatabaseConnection(databaseParameters);
+        if (factory != null)
+            return factory.getInstance(databaseParameters);
 
-            default:
-                return null;
-        }
+        return null;
 
     }
 
@@ -364,6 +363,14 @@ public class DatabaseManager {
             }
         }
 
+    }
+
+    /**
+     * Register an DatabaseConnectionFactory in the under control of this DatabaseManager
+     * @param connectionFactory the factory instance
+     */
+    public void registerConnectionFactory(DatabaseConnectionFactory connectionFactory){
+        databaseConnectionFactoryTable.put(connectionFactory.getEngine(), connectionFactory);
     }
 
 }

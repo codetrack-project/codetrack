@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba182f84-0973-476a-8e6b-7db1c8751b84" name="Default" comment="Create test to FileProject class">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" />
+    <list default="true" id="ba182f84-0973-476a-8e6b-7db1c8751b84" name="Default" comment="Fix the FileProject.newBuilde() null pointer exception">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotFoundRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/Repository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchLikeId.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchOneById.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-annotation-java/codetrack-annotation-java.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-annotation-jsf/codetrack-annotation-jsf.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/ProjectRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/ConditionRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/FlowRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/RuleRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/StepRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/FeatureRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/IssueRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/RequirementRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/RevisionRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/StoryRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/UseCaseRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/fixing/FixRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/AuthorRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/ContentRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/MarkRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/PathRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/ProductRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/ReferenceRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/SourceRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/temporal/CycleRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/temporal/IterationRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/temporal/SprintRepository.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/exception/CanNotFoundData.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotFoundData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/exception/CanNotRegister.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotRegister.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/exception/CanNotRemoveData.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotRemoveData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/exception/CanNotSaveData.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotSaveData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseException.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Database.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java" afterPath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/ProjectItem.java" afterPath="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/ProjectItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack.iml" afterPath="$PROJECT_DIR$/codetrack.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="03cc4ae8-0883-46e6-99ab-b79f037b0a87" name="Rejected commit: Default" comment="Add org.codetrack.annotation.temporal package and move the temporal type annotations." />
@@ -19,6 +80,7 @@
     <ignored path="$PROJECT_DIR$/codetrack-scanner-java/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/codetrack-annotation-jsf/target/" />
+    <ignored path="$PROJECT_DIR$/codetrack-file-database/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +101,9 @@
     <SUITE FILE_PATH="coverage/codetrack$FileDatabaseConnectionTest.coverage" NAME="FileDatabaseConnectionTest Coverage Results" MODIFIED="1431117746570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.codetrack.database.connection.file.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/codetrack$org_codetrack_database_connection_file_in_codetrack_file_database.coverage" NAME="org.codetrack.database.connection.file in codetrack-file-database Coverage Results" MODIFIED="1437623551178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.codetrack.database.connection.file.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/codetrack$FileDatabaseTest.coverage" NAME="FileDatabaseTest Coverage Results" MODIFIED="1430907038652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.codetrack.database.connection.file.*</FILTER>
     </SUITE>
@@ -52,12 +117,13 @@
       <FILTER>org.codetrack.domain.data.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/codetrack$FileDatabaseConnectionTest_and_3_more.coverage" NAME="FileDatabaseConnectionTest and 3 more Coverage Results" MODIFIED="1431118625792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/codetrack$org_codetrack_database_connection_file_in_codetrack_database.coverage" NAME="org.codetrack.database.connection.file in codetrack-database Coverage Results" MODIFIED="1431118660885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/codetrack$org_codetrack_database_connection_file_in_codetrack_database.coverage" NAME="org.codetrack.database.connection.file in codetrack-database Coverage Results" MODIFIED="1436152561024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.codetrack.database.connection.file.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/codetrack$org_codetrack_domain_data_identify_in_codetrack_core.coverage" NAME="org.codetrack.domain.data.identify in codetrack-core Coverage Results" MODIFIED="1433903567483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.codetrack.domain.data.identify.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/codetrack$All_in_codetrack_database.coverage" NAME="All in codetrack-database Coverage Results" MODIFIED="1436152528400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/codetrack$org_codetrack_in_codetrack_core.coverage" NAME="org.codetrack in codetrack-core Coverage Results" MODIFIED="1434515477990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.codetrack.*</FILTER>
     </SUITE>
@@ -74,138 +140,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Condition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Condition.java">
+      <file leaf-file-name="FileRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#3538#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1123#1124#0" expanded="false" />
-                <element signature="e#1146#1147#0" expanded="false" />
-                <element signature="e#1419#1420#0" expanded="false" />
-                <element signature="e#1455#1456#0" expanded="false" />
-                <element signature="e#1817#1818#0" expanded="false" />
-                <element signature="e#1850#1851#0" expanded="false" />
-                <element signature="e#1902#1903#0" expanded="false" />
-                <element signature="e#1946#1947#0" expanded="false" />
-                <element signature="e#2300#2301#0" expanded="false" />
-                <element signature="e#2374#2375#0" expanded="false" />
-                <element signature="e#3478#3479#0" expanded="false" />
-                <element signature="e#3528#3529#0" expanded="false" />
-              </folding>
+              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Behavior.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Behavior.java">
+      <file leaf-file-name="FileDatabaseRepositoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#2757#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1280#1281#0" expanded="false" />
-                <element signature="e#1303#1304#0" expanded="false" />
-                <element signature="e#1346#1347#0" expanded="false" />
-                <element signature="e#1371#1372#0" expanded="false" />
-                <element signature="e#1407#1408#0" expanded="false" />
-                <element signature="e#1435#1436#0" expanded="false" />
-                <element signature="e#1466#1467#0" expanded="false" />
-                <element signature="e#1493#1494#0" expanded="false" />
-                <element signature="e#1533#1534#0" expanded="false" />
-                <element signature="e#1565#1566#0" expanded="false" />
-                <element signature="e#1603#1604#0" expanded="false" />
-                <element signature="e#1637#1638#0" expanded="false" />
-                <element signature="e#1691#1692#0" expanded="false" />
-                <element signature="e#1737#1738#0" expanded="false" />
-                <element signature="e#1784#1785#0" expanded="false" />
-                <element signature="e#1814#1815#0" expanded="false" />
-                <element signature="e#1873#1874#0" expanded="false" />
-                <element signature="e#1911#1912#0" expanded="false" />
-                <element signature="e#2412#2413#0" expanded="false" />
-                <element signature="e#2471#2472#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileProject.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42782152">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6433#6434#0" expanded="true" />
-                <element signature="e#6485#6486#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileDatabaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="FileProjectTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseRepositoryFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseError.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/exception/DatabaseError.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseConnectionFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileProject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#5781#5782#0" expanded="true" />
+                <element signature="e#5823#5824#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#2277#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileDatabase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,11 +252,12 @@
       <list>
         <option value="AnnotationType" />
         <option value="package-info" />
-        <option value="Interface" />
         <option value="Codetrack Repository" />
-        <option value="Class" />
         <option value="CDTRepository" />
         <option value="JUnit4 Test Class" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -243,43 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/temporal/CycleRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/SourceRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/ReferenceRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/ProductRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/PathRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/MarkRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/ContentRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/AuthorRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/fixing/FixRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/UseCaseRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/StoryRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/RevisionRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/RequirementRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/IssueRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/FeatureRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/StepRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/RuleRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/FlowRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/ConditionRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/exception/CanNotFoundData.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/ProjectItem.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Temporal.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Sprint.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Iteration.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Cycle.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Source.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Reference.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Product.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Path.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Mark.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Content.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Author.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/fixing/Fix.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/UseCase.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Story.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Requirement.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Issue.java" />
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Feature.java" />
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Definition.java" />
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Revision.java" />
@@ -288,12 +287,49 @@
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Flow.java" />
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Condition.java" />
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Behavior.java" />
-        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/codetrack-core/pom.xml" />
         <option value="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
         <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectioFactory.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/pom.xml" />
+        <option value="$PROJECT_DIR$/codetrack-database/pom.xml" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/repositories/FileDatabaseState.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseState.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Database.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/ProjectItem.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/ProjectRepository.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/temporal/SprintRepository.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/Repository.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/SearchResponse.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/SearchRequest.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/SearchRequestById.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/SearchOneById.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchOneById.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchLikeId.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/repositories/FileMarkRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchResponse.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/repositories/BaseFileRepository.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java" />
+        <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotFoundRepository.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java" />
       </list>
     </option>
   </component>
@@ -314,6 +350,30 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="codetrack-file-database" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="codetrack-file-database" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -350,10 +410,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1279" />
-    <option name="y" value="225" />
-    <option name="width" value="1368" />
-    <option name="height" value="742" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -390,6 +449,11 @@
             <id>XSLT</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -416,6 +480,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -444,7 +510,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack-database" />
+              <option name="myItemId" value="codetrack-file-database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,7 +524,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack-database" />
+              <option name="myItemId" value="codetrack-file-database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack-file-database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -474,7 +558,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,7 +572,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack-database" />
+              <option name="myItemId" value="codetrack-file-database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -496,15 +580,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack-file-database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -525,20 +627,22 @@
               <option name="myItemId" value="codetrack-database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codetrack-database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,44 +673,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shell" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack-database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exception" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -641,51 +707,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="connection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codetrack-database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="connection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -714,15 +740,18 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/codetrack-annotation-java/src/main/java/org/codetrack/annotation" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/codetrack-file-database/src/test/java" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
     <property name="settings.editor.splitter.proportion" value="0.2480695" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/codetrack-file-database/pom.xml" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.codetrack.domain.repository" />
       <recent name="org.codetrack.database" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -734,17 +763,20 @@
       <recent name="org.codetrack.database.data" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.codetrack.database.connection.file" />
+      <recent name="org.codetrack" />
       <recent name="org.codetrack.domain.repository" />
       <recent name="org.codetrack.domain.repository.temporal" />
       <recent name="org.codetrack.domain" />
-      <recent name="org.codetrack" />
-      <recent name="org.codetrack.domain.data" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.codetrack.database.connection.file" />
       <recent name="org.codetrack.domain.data.temporal" />
       <recent name="org.codetrack.domain.data.identify" />
       <recent name="org.codetrack.database" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.codetrack.repository" />
     </key>
   </component>
   <component name="Regex">
@@ -758,87 +790,43 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.FileProjectTest">
-    <configuration default="false" name="org.codetrack.database in codetrack-database" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.codetrack.database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="codetrack-database" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.codetrack.database" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+  <component name="RunManager" selected="JUnit.org.codetrack.database.connection.file in codetrack-file-database">
+    <configuration default="false" name="codetrack [install]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
-    <configuration default="false" name="All in codetrack-core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="codetrack-core" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in codetrack-database" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="codetrack-database" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FileProjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FileDatabaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="org.codetrack.database.connection.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="codetrack-database" />
+      <module name="codetrack-file-database" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="org.codetrack.database.connection.file" />
-      <option name="MAIN_CLASS_NAME" value="org.codetrack.database.connection.file.FileProjectTest" />
+      <option name="MAIN_CLASS_NAME" value="org.codetrack.database.connection.file.FileDatabaseTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -853,20 +841,72 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="FileProjectTest.testFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FileDatabaseConnectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="org.codetrack.database.connection.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="codetrack-database" />
+      <module name="codetrack-file-database" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="org.codetrack.database.connection.file" />
-      <option name="MAIN_CLASS_NAME" value="org.codetrack.database.connection.file.FileProjectTest" />
-      <option name="METHOD_NAME" value="testFindById" />
+      <option name="MAIN_CLASS_NAME" value="org.codetrack.database.connection.file.FileDatabaseConnectionTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FileDatabaseRepositoryTest.testName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.codetrack.database.connection.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="codetrack-file-database" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.codetrack.database.connection.file" />
+      <option name="MAIN_CLASS_NAME" value="org.codetrack.database.connection.file.FileDatabaseRepositoryTest" />
+      <option name="METHOD_NAME" value="testName" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="org.codetrack.database.connection.file in codetrack-file-database" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.codetrack.database.connection.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="codetrack-file-database" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="org.codetrack.database.connection.file" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1079,19 +1119,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.org.codetrack.database in codetrack-database" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in codetrack-core" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in codetrack-database" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FileProjectTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FileProjectTest.testFindById" />
+      <item index="0" class="java.lang.String" itemvalue="Maven.codetrack [install]" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FileDatabaseTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FileDatabaseConnectionTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FileDatabaseRepositoryTest.testName" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.org.codetrack.database.connection.file in codetrack-file-database" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FileProjectTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FileProjectTest.testFindById" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in codetrack-database" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.All in codetrack-core" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.org.codetrack.database in codetrack-database" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.org.codetrack.database.connection.file in codetrack-file-database" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FileDatabaseRepositoryTest.testName" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FileDatabaseConnectionTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FileDatabaseTest" />
+        <item index="4" class="java.lang.String" itemvalue="Maven.codetrack [install]" />
       </list>
     </recent_temporary>
   </component>
@@ -1346,7 +1386,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436152138606</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Fix the FileProject.newBuilde() null pointer exception">
+      <created>1436152430988</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1436152430988</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1388,39 +1434,39 @@
     </servers>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1279" y="225" width="1368" height="742" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48604268" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30921054" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Code explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33308157" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39901477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41543514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26436782" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41447368" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290469" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26436782" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35045317" sideWeight="0.6707317" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.6707317" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle View" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676518" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35649547" sideWeight="0.3292683" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51724136" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4868421" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32840723" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="94" y="181" width="1168" height="542" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39901477" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -1441,7 +1487,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The main and modules pom.xml revised" />
     <MESSAGE value="Test for FileDatabase, FileDatabaseConnection and DatabaseParameters classes are created" />
     <MESSAGE value="Change retention policy of annotation to RetentionRetentionPolicy.RUNTIME" />
     <MESSAGE value="Move the SampleAnnotated.java for the sample package&#10;Add observation text to Fix annotation" />
@@ -1466,7 +1511,8 @@
     <MESSAGE value="Force the UTF-8 encoding" />
     <MESSAGE value="Fix version variable problem in codetrack-core/pom.xml" />
     <MESSAGE value="Create test to FileProject class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create test to FileProject class" />
+    <MESSAGE value="Fix the FileProject.newBuilde() null pointer exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix the FileProject.newBuilde() null pointer exception" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1487,52 +1533,34 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java</url>
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java</url>
           <line>66</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java</url>
-          <line>71</line>
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java</url>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java</url>
-          <line>152</line>
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java</url>
+          <line>163</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java</url>
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java</url>
           <line>104</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java</url>
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java</url>
           <line>73</line>
           <properties />
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java</url>
-          <line>86</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-core/src/test/java/org/codetrack/domain/data/identify/SourceTest.java</url>
@@ -1547,13 +1575,103 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java</url>
-          <line>151</line>
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java</url>
+          <line>152</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
+          <line>242</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
+          <line>110</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="40" />
+      <option name="time" value="60" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1569,485 +1687,417 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/identify/AuthorRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/fixing/FixRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/UseCaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/StoryRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/RevisionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/RequirementRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/IssueRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/definition/FeatureRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/StepRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/RuleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/FlowRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/behavior/ConditionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/ProjectRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/repository/temporal/SprintRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/exception/CanNotFoundData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/ProjectItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Temporal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Sprint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Iteration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/temporal/Cycle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Source.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/17.0/guava-17.0-sources.jar!/com/google/common/collect/Maps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="182" column="19" selection-start-line="182" selection-start-column="19" selection-end-line="182" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.030981068">
+          <caret line="1491" column="45" selection-start-line="1491" selection-start-column="45" selection-end-line="1491" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Reference.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7521515">
+          <caret line="56" column="4" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Product.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/ProjectItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#1698#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1260#1261#0" expanded="false" />
+            <element signature="e#1306#1307#0" expanded="false" />
+            <element signature="e#1344#1345#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Path.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Mark.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/shell/DatabaseCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/ContentType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Content.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="103" selection-start-line="127" selection-start-column="103" selection-end-line="127" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/fixing/Fix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/UseCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Story.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Requirement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Issue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Feature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Definition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <caret line="123" column="15" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/definition/Revision.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="2" selection-start-line="122" selection-start-column="2" selection-end-line="122" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#3921#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1359#1360#0" expanded="false" />
-            <element signature="e#1395#1396#0" expanded="false" />
-            <element signature="e#1716#1717#0" expanded="false" />
-            <element signature="e#1741#1742#0" expanded="false" />
-            <element signature="e#1777#1778#0" expanded="false" />
-            <element signature="e#1805#1806#0" expanded="false" />
-            <element signature="e#1843#1844#0" expanded="false" />
-            <element signature="e#1877#1878#0" expanded="false" />
-            <element signature="e#1931#1932#0" expanded="false" />
-            <element signature="e#1977#1978#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2033#2034#0" expanded="false" />
-            <element signature="e#2071#2072#0" expanded="false" />
-            <element signature="e#2103#2104#0" expanded="false" />
-            <element signature="e#2143#2144#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
-            <element signature="e#2225#2226#0" expanded="false" />
-            <element signature="e#2263#2264#0" expanded="false" />
-            <element signature="e#2764#2765#0" expanded="false" />
-            <element signature="e#2841#2842#0" expanded="false" />
-            <element signature="e#3862#3863#0" expanded="false" />
-            <element signature="e#3911#3912#0" expanded="false" />
-          </folding>
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Step.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchLikeId.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#3375#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1399#1400#0" expanded="false" />
-            <element signature="e#1435#1436#0" expanded="false" />
-            <element signature="e#1477#1478#0" expanded="false" />
-            <element signature="e#1513#1514#0" expanded="false" />
-            <element signature="e#2126#2127#0" expanded="false" />
-            <element signature="e#2167#2168#0" expanded="false" />
-          </folding>
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Rule.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#3321#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1142#1143#0" expanded="false" />
-            <element signature="e#1400#1401#0" expanded="false" />
-            <element signature="e#1436#1437#0" expanded="false" />
-            <element signature="e#1789#1790#0" expanded="false" />
-            <element signature="e#1817#1818#0" expanded="false" />
-            <element signature="e#1870#1871#0" expanded="false" />
-            <element signature="e#1904#1905#0" expanded="false" />
-            <element signature="e#3266#3267#0" expanded="false" />
-            <element signature="e#3311#3312#0" expanded="false" />
-          </folding>
+          <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Flow.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#3321#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1119#1120#0" expanded="false" />
-            <element signature="e#1142#1143#0" expanded="false" />
-            <element signature="e#1400#1401#0" expanded="false" />
-            <element signature="e#1436#1437#0" expanded="false" />
-            <element signature="e#1789#1790#0" expanded="false" />
-            <element signature="e#1817#1818#0" expanded="false" />
-            <element signature="e#1870#1871#0" expanded="false" />
-            <element signature="e#1904#1905#0" expanded="false" />
-            <element signature="e#3266#3267#0" expanded="false" />
-            <element signature="e#3311#3312#0" expanded="false" />
-          </folding>
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Condition.java">
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotFoundData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#3538#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1123#1124#0" expanded="false" />
-            <element signature="e#1146#1147#0" expanded="false" />
-            <element signature="e#1419#1420#0" expanded="false" />
-            <element signature="e#1455#1456#0" expanded="false" />
-            <element signature="e#1817#1818#0" expanded="false" />
-            <element signature="e#1850#1851#0" expanded="false" />
-            <element signature="e#1902#1903#0" expanded="false" />
-            <element signature="e#1946#1947#0" expanded="false" />
-            <element signature="e#2300#2301#0" expanded="false" />
-            <element signature="e#2374#2375#0" expanded="false" />
-            <element signature="e#3478#3479#0" expanded="false" />
-            <element signature="e#3528#3529#0" expanded="false" />
-          </folding>
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/behavior/Behavior.java">
+    <entry file="jar:///opt/jdk1.8.0_45/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93793106">
+          <caret line="409" column="11" selection-start-line="409" selection-start-column="11" selection-end-line="409" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_45/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3637931">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_45/src.zip!/java/lang/RuntimeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3637931">
+          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotFoundRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#2757#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1280#1281#0" expanded="false" />
-            <element signature="e#1303#1304#0" expanded="false" />
-            <element signature="e#1346#1347#0" expanded="false" />
-            <element signature="e#1371#1372#0" expanded="false" />
-            <element signature="e#1407#1408#0" expanded="false" />
-            <element signature="e#1435#1436#0" expanded="false" />
-            <element signature="e#1466#1467#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1533#1534#0" expanded="false" />
-            <element signature="e#1565#1566#0" expanded="false" />
-            <element signature="e#1603#1604#0" expanded="false" />
-            <element signature="e#1637#1638#0" expanded="false" />
-            <element signature="e#1691#1692#0" expanded="false" />
-            <element signature="e#1737#1738#0" expanded="false" />
-            <element signature="e#1784#1785#0" expanded="false" />
-            <element signature="e#1814#1815#0" expanded="false" />
-            <element signature="e#1873#1874#0" expanded="false" />
-            <element signature="e#1911#1912#0" expanded="false" />
-            <element signature="e#2412#2413#0" expanded="false" />
-            <element signature="e#2471#2472#0" expanded="false" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/17.0/guava-17.0-sources.jar!/com/google/common/collect/Lists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseTestConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="36" selection-start-line="9" selection-start-column="57" selection-end-line="10" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Project.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="44" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/domain/data/identify/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <element signature="e#0#2277#0" expanded="false" />
+            <element signature="e#1952#1953#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.1.6.RELEASE/spring-beans-4.1.6.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#1341#1342#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="13" selection-start-line="39" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.1.6.RELEASE/spring-beans-4.1.6.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/InitDestroyAnnotationBeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.1.6.RELEASE/spring-test-4.1.6.RELEASE-sources.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.426056">
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="325" column="0" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/runners/ParentRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.1.6.RELEASE/spring-test-4.1.6.RELEASE-sources.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/repository/SearchOneById.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#1363#1364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+          <folding>
+            <element signature="e#5781#5782#0" expanded="true" />
+            <element signature="e#5823#5824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/exception/DatabaseError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/internal/runners/JUnit38ClassRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/file/FileProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42782152">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6433#6434#0" expanded="true" />
-            <element signature="e#6485#6486#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

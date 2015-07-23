@@ -21,6 +21,7 @@ import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * All items in the project extends of this class
@@ -30,6 +31,10 @@ import java.io.Serializable;
 @Product(id = "codetrack-core")
 @Feature(id = "#4-DATABASE")
 public abstract class ProjectItem implements Serializable {
+
+    private Date createdAt;
+
+    private Date updatedAt;
 
     private Project project;
 
@@ -42,6 +47,22 @@ public abstract class ProjectItem implements Serializable {
 
     public void setProject(Project project){
         this.project = project;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public abstract String getId();
