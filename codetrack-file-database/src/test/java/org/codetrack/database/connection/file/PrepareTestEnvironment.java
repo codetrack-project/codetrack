@@ -17,7 +17,9 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -28,7 +30,13 @@ import java.io.File;
 @Component
 public class PrepareTestEnvironment {
 
-    public void cleanPath(DatabaseParameters databaseParameters){
+    @Autowired
+    private DatabaseManager databaseManager;
+
+    @Autowired
+    private DatabaseParameters databaseParameters;
+
+    public void cleanPath(){
 
         File dir = new File(databaseParameters.getPath() + FileTestConfiguration.FILE_SEPARATOR + "databases");
         if (dir.exists()) {
@@ -42,5 +50,14 @@ public class PrepareTestEnvironment {
         }
 
         dir.mkdirs();
+    }
+
+    public void prepareAll() {
+
+        cleanPath();
+
+        if (!databaseManager.isRegistered(databaseParameters))
+            databaseManager.register(databaseParameters);
+
     }
 }

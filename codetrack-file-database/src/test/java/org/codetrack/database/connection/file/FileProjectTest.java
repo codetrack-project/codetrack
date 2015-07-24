@@ -29,6 +29,7 @@ import org.codetrack.domain.data.temporal.Iteration;
 import org.codetrack.repository.Repository;
 import org.codetrack.repository.SearchOneById;
 import org.codetrack.repository.SearchResponse;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -55,12 +56,12 @@ public class FileProjectTest extends TestCase {
     private PrepareTestEnvironment prepareTestEnvironment;
 
     @Override
+    @Before
     public void setUp() throws Exception {
 
         super.setUp();
 
-        prepareTestEnvironment.cleanPath(databaseParameters);
-        databaseManager.register(databaseParameters);
+        prepareTestEnvironment.prepareAll();
 
     }
 

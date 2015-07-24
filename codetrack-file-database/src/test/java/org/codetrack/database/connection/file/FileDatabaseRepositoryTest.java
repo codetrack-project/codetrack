@@ -26,6 +26,7 @@ import org.codetrack.domain.data.temporal.Cycle;
 import org.codetrack.repository.Repository;
 import org.codetrack.repository.SearchOneById;
 import org.codetrack.repository.SearchResponse;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,11 +52,11 @@ public class FileDatabaseRepositoryTest extends TestCase {
     private PrepareTestEnvironment prepareTestEnvironment;
 
     @Override
+    @Before
     public void setUp() throws Exception {
         super.setUp();
 
-        prepareTestEnvironment.cleanPath(databaseParameters);
-        databaseManager.register(databaseParameters);
+        prepareTestEnvironment.prepareAll();
 
     }
 

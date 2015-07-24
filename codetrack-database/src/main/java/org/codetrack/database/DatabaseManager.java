@@ -373,4 +373,7 @@ public class DatabaseManager {
         databaseConnectionFactoryTable.put(connectionFactory.getEngine(), connectionFactory);
     }
 
+    public boolean isRegistered(DatabaseParameters databaseParameters) {
+        return databaseInfoTable.containsKey(databaseParameters.getName());
+    }
 }

@@ -22,6 +22,7 @@ import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.database.connection.DatabaseConnection;
 import org.codetrack.domain.data.Database;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,11 +48,11 @@ public class FileDatabaseConnectionTest extends TestCase {
     private PrepareTestEnvironment prepareTestEnvironment;
 
     @Override
+    @Before
     public void setUp() throws Exception {
         super.setUp();
 
-        prepareTestEnvironment.cleanPath(databaseParameters);
-        databaseManager.register(databaseParameters);
+        prepareTestEnvironment.prepareAll();
 
     }
 
@@ -74,7 +75,7 @@ public class FileDatabaseConnectionTest extends TestCase {
                 + "databases"
                 + FileTestConfiguration.FILE_SEPARATOR
                 + fileDatabaseConnection.getDatabaseParameters().getName()
-                + FileDatabaseConnection.DATABASE_EXTENSION;
+                 + FileDatabaseConnection.DATABASE_EXTENSION;
 
         assertNotNull(fileDatabaseConnection.getFileName());
         assertEquals(fileDatabaseConnection.getFileName(), expectedFileName);
@@ -115,5 +116,5 @@ public class FileDatabaseConnectionTest extends TestCase {
 
 
     }
-    
+
 }

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba182f84-0973-476a-8e6b-7db1c8751b84" name="Default" comment="Fix the FileProject.newBuilde() null pointer exception">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="03cc4ae8-0883-46e6-99ab-b79f037b0a87" name="Rejected commit: Default" comment="Add org.codetrack.annotation.temporal package and move the temporal type annotations." />
@@ -79,11 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java">
+      <file leaf-file-name="FileDatabaseTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,81 +105,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileDatabaseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java">
+      <file leaf-file-name="FileDatabaseConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileProjectTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileProjectTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.4817073">
+              <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java">
+      <file leaf-file-name="PrepareTestEnvironment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="116" column="34" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+              <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseRepositoryFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseError.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/exception/DatabaseError.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnectionFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileDatabaseConnectionTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileDatabaseConnectionTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61585367">
-              <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileDatabase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReflectiveCallable.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileDatabaseConnectionFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -254,18 +258,18 @@
         <option value="$PROJECT_DIR$/codetrack-core/src/main/java/org/codetrack/exception/CanNotFoundRepository.java" />
         <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java" />
         <option value="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java" />
-        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java" />
-        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" />
         <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java" />
         <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java" />
         <option value="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java" />
-        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" />
-        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
         <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java" />
         <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" />
         <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
       </list>
     </option>
   </component>
@@ -1048,9 +1052,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.org.codetrack.database.connection.file in codetrack-file-database" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FileDatabaseConnectionTest.testReopen" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FileDatabaseRepositoryTest.testName" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FileDatabaseConnectionTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FileDatabaseConnectionTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FileDatabaseConnectionTest.testReopen" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FileDatabaseRepositoryTest.testName" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.FileDatabaseTest" />
       </list>
     </recent_temporary>
@@ -1355,7 +1359,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1366,7 +1370,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33308157" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41447368" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41447368" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26436782" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.6707317" order="4" side_tool="false" content_ui="combo" />
@@ -1544,7 +1548,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java</url>
-          <line>60</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -1556,7 +1560,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java</url>
-          <line>64</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
@@ -1568,7 +1572,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java</url>
-          <line>90</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
@@ -1584,8 +1588,26 @@
           <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="60" />
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1795,6 +1817,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="406" column="0" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1802,31 +1825,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1341#1342#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1834,6 +1835,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1841,13 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.426056">
           <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="325" column="0" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1856,13 +1851,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1870,6 +1859,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1877,22 +1867,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1363#1364#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1921,32 +1898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1991,10 +1942,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="138" selection-start-line="36" selection-start-column="138" selection-end-line="36" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61585367">
-          <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4817073">
+          <caret line="63" column="44" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
           <folding />
         </state>
       </provider>
