@@ -17,12 +17,16 @@
 
 package org.codetrack.database;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.connection.DatabaseConnection;
 
 /**
  * Interface defines operations of an connection factory
  * @author josecmoj at 06/07/15.
  */
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
 public interface DatabaseConnectionFactory {
 
     /**

@@ -20,6 +20,8 @@ package org.codetrack.database.connection.file;
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
 import org.apache.commons.collections.MapUtils;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
 import org.codetrack.domain.data.ProjectItem;
@@ -32,6 +34,8 @@ import java.util.concurrent.ConcurrentMap;
  *
  * @author josecmoj at 02/05/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 public class FileProject implements Project {
 
     private static final long serialVersionUID = -1L;

@@ -18,6 +18,8 @@
 package org.codetrack.database.connection.file;
 
 import com.google.common.base.Strings;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.domain.data.ProjectItem;
 import org.codetrack.exception.CanNotFoundData;
 import org.codetrack.exception.CanNotRemoveData;
@@ -34,6 +36,8 @@ import java.util.Map;
  *
  * @author josecmoj at 07/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @Component
 @Scope("prototype")
 public class FileRepository<T> implements Repository<T>{

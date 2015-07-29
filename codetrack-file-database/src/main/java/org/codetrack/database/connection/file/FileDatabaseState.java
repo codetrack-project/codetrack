@@ -17,11 +17,16 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
+
 /**
  * FileDatabase state Enum
  *
  * @author josecmoj at 08/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 public enum FileDatabaseState {
 
     /**

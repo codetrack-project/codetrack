@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
 import org.codetrack.repository.Repository;
@@ -25,6 +27,8 @@ import org.codetrack.repository.Repository;
  * Interface defines operations of an repository factory
  * @author josecmoj at 16/07/15.
  */
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
 public interface DatabaseRepositoryFactory {
 
     /**

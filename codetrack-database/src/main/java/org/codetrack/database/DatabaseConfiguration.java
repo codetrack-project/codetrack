@@ -20,6 +20,8 @@ package org.codetrack.database;
 import com.google.common.base.Strings;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.exception.DatabaseError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,6 +40,8 @@ import java.util.Map;
  *
  * @author josecmoj at 25/04/15.
  */
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
 @Component
 public class DatabaseConfiguration {
 

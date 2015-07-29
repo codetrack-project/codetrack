@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.springframework.core.NestedRuntimeException;
 
 /**
@@ -24,6 +26,8 @@ import org.springframework.core.NestedRuntimeException;
  *
  * @author josecmoj at 02/05/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 public class FileDatabaseException extends NestedRuntimeException {
     public FileDatabaseException(String msg) {
         super(msg);

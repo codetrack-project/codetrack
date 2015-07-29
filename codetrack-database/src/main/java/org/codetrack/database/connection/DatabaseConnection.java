@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
@@ -28,6 +30,8 @@ import org.codetrack.repository.Repository;
  * @author josecmoj at 29/04/15.
  * @see DatabaseParameters
  */
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
 public interface DatabaseConnection {
 
     /**

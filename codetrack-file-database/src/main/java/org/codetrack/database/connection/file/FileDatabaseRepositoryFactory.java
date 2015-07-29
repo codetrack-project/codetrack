@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.connection.DatabaseRepositoryFactory;
 import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
@@ -31,6 +33,8 @@ import org.springframework.stereotype.Component;
  *
  * @author josecmoj at 16/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @Component
 @Scope("prototype")
 public class FileDatabaseRepositoryFactory implements DatabaseRepositoryFactory {

@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,8 @@ import java.io.File;
 /**
  * @author josecmoj at 22/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @Component
 public class PrepareTestEnvironment {
 

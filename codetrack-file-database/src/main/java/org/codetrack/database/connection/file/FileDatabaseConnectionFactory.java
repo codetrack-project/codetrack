@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseConnectionFactory;
 import org.codetrack.database.DatabaseEngine;
 import org.codetrack.database.DatabaseManager;
@@ -33,6 +35,8 @@ import javax.annotation.PostConstruct;
  *
  * @author josecmoj at 06/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @Component
 public class FileDatabaseConnectionFactory implements DatabaseConnectionFactory{
 

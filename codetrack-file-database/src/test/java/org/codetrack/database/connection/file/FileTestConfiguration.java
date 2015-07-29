@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseEngine;
 import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
@@ -28,6 +30,8 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author josecmoj at 20/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @Configuration
 @ComponentScan({"org.codetrack.database","org.codetrack.database.connection.file"})
 public class FileTestConfiguration {

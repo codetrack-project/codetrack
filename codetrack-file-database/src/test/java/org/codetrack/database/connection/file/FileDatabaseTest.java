@@ -19,6 +19,8 @@ package org.codetrack.database.connection.file;
 
 import com.google.common.collect.Maps;
 import junit.framework.TestCase;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.domain.data.Project;
 import org.junit.Test;
 
@@ -28,6 +30,8 @@ import java.util.Map;
 /**
  * @author josecmoj at 06/05/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 public class FileDatabaseTest extends TestCase {
 
     private static String DATABASE_TEXT_NAME_MODIFIED = "DATABASE_NAME_MODIFIED";

@@ -18,6 +18,8 @@
 package org.codetrack.database.connection.file;
 
 import junit.framework.TestCase;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.database.connection.DatabaseConnection;
@@ -38,6 +40,8 @@ import java.util.Date;
 /**
  * @author josecmoj at 22/07/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {FileTestConfiguration.class})
 public class FileDatabaseRepositoryTest extends TestCase {

@@ -19,6 +19,8 @@ package org.codetrack.database.connection.file;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.exception.DatabaseError;
 import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
@@ -32,6 +34,8 @@ import java.util.Observable;
  *
  * @author josecmoj at 02/05/15.
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 public class FileDatabase extends Observable implements Database {
 
     private static final long serialVersionUID = -1L;

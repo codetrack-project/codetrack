@@ -1,4 +1,3 @@
-
 /*
  *  Copyright 2015 the original author or authors members of codetrack.org
  *
@@ -16,23 +15,15 @@
  *
  */
 
-package org.codetrack.shell;
-
-import org.codetrack.annotation.identify.Product;
-import org.springframework.shell.Bootstrap;
-
-import java.io.IOException;
-
 /**
- * Class to run shell in the IDE
- *
- * @author josecmoj at 19/04/15.
+ * @author josecmoj at 06/06/15.
  */
-@Product(id = "codetrack-shell")
-public class Main {
 
-    public static void main(String[] args) throws IOException {
-        Bootstrap.main(args);
-    }
 
-}
+@Cycles({
+        @Cycle(id = "1.1-RELEASE", startAt = "2015/O5/01", endAt = "2015/07/31")
+}) package org.codetrack.shell;
+
+import org.codetrack.annotation.temporal.Cycle;
+import org.codetrack.annotation.temporal.Cycles;
+

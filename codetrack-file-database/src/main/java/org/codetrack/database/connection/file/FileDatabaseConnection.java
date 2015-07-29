@@ -17,6 +17,8 @@
 
 package org.codetrack.database.connection.file;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.database.connection.DatabaseConnection;
 import org.codetrack.database.connection.DatabaseRepositoryFactory;
@@ -41,6 +43,8 @@ import java.util.Observer;
  * @see DatabaseParameters
  * @see FileDatabaseException
  */
+@Product(id = "codetrack-file-database")
+@Feature(id = "#4-DATABASE")
 @Component
 @Scope("prototype")
 public class FileDatabaseConnection implements DatabaseConnection, Observer{
