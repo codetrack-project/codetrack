@@ -221,10 +221,23 @@ public class FileProject implements Project {
 
     }
 
+    /**
+     * Get map to item class
+     *
+     * @param clazz - class of item
+     * @return SortedMap instance
+     */
     public SortedMap<String,ProjectItem> getMapItems(Class clazz) {
         return itemsMap.get(clazz);
     }
 
+    /**
+     * Verify if item is saved in the project graph
+     * @param itemClass - class of item object
+     * @param item - item instance
+     * @param <T> - generic class
+     * @return true if item is in the project data graph
+     */
     public <T> boolean containsItem(Class itemClass, T item) {
 
         SortedMap<String, ProjectItem> map = lazyMap(item.getClass());

@@ -80,40 +80,71 @@ public class FileDatabase extends Observable implements Database {
     }
 
 
+    /**
+     * Access the last update of database
+     *
+     * @return the last update date
+     */
     @Override
     public Date getLastUpdate() {
         return lastUpdate;
     }
 
+    /**
+     * Setting the last update file
+     *
+     * @param lastUpdate - the last update date
+     */
     @Override
     public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getName() {
         return name;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Project getProject() {
         return project;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setProject(Project project) {
         this.project = project;
     }
 
+    /**
+     * Access the FileDatabase state
+     * @return State of database
+     * @see FileDatabaseState
+     */
     public FileDatabaseState getState() {
         return state;
     }
 
+    /**
+     * Setting the database state
+     * @param state - state of database
+     */
     public void setState(FileDatabaseState state) {
         this.state = state;
     }
@@ -130,24 +161,34 @@ public class FileDatabase extends Observable implements Database {
 
     /**
      * Mark load time hash code
+     * {@inheritDoc}
      */
     @Override
     public void markIsLoaded() {
         this.state = FileDatabaseState.LOADED;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void addProject(Project project) {
         projectMap.put(project.getId(), project);
         this.changed();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void removeProject(Project project) {
         projectMap.remove(project);
         this.changed();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Project findProject(String id) {
 
@@ -158,6 +199,9 @@ public class FileDatabase extends Observable implements Database {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Project selectProject(String id) {
 
@@ -169,6 +213,9 @@ public class FileDatabase extends Observable implements Database {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void save() {
 
@@ -176,12 +223,18 @@ public class FileDatabase extends Observable implements Database {
 
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void changed() {
         setLastUpdate(new Date());
         setState(FileDatabaseState.CHANGED);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -194,11 +247,17 @@ public class FileDatabase extends Observable implements Database {
                 Objects.equal(getLastUpdate(), that.getLastUpdate());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int hashCode() {
         return Objects.hashCode(getName(), getLastUpdate());
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String toString() {
         return Objects.toStringHelper(this)

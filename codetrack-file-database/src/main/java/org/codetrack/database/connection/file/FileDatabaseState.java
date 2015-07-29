@@ -18,9 +18,26 @@
 package org.codetrack.database.connection.file;
 
 /**
+ * FileDatabase state Enum
+ *
  * @author josecmoj at 08/07/15.
  */
 public enum FileDatabaseState {
 
-    LOADED, LOADING, CHANGED, SAVING
+    /**
+     * LOADED - when load database data is completed
+     */
+    LOADED,
+    /**
+     * LOADING - when database is in loading process
+     */
+    LOADING,
+    /**
+     * CHANGED - when any database data is modified
+     */
+    CHANGED,
+    /**
+     * SAVING - when database is in saving process
+     */
+    SAVING
 }

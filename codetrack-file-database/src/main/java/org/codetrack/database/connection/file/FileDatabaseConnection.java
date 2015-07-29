@@ -99,55 +99,88 @@ public class FileDatabaseConnection implements DatabaseConnection, Observer{
      */
     private FileDatabase database;
 
+    /**
+     * Repository factory
+     */
     @Autowired
     private FileDatabaseRepositoryFactory repositoryFactory;
 
     public FileDatabaseConnection() {
+        super();
     }
 
     public FileDatabaseConnection(DatabaseParameters databaseParameters) {
+        super();
         this.databaseParameters = databaseParameters;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Database getDatabase() {
         return database;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setDatabase(Database database) {
         this.database = (FileDatabase)database;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DatabaseParameters getDatabaseParameters() {
         return databaseParameters;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void setDatabaseParameters(DatabaseParameters databaseParameters) {
         this.databaseParameters = databaseParameters;
     }
 
+    /**
+     * Access file name
+     *
+     * @return String with file name
+     */
     public String getFileName() {
         return fileName;
     }
 
+    /**
+     * Setting file name
+     * @param fileName - String with file name
+     */
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
 
+    /**
+     * Get path name
+     * @return String with path name
+     */
     public String getPathName() {
         return pathName;
     }
 
+    /**
+     * Setting path name
+     * @param pathName - String with path name
+     */
     public void setPathName(String pathName) {
         this.pathName = pathName;
     }
 
     /**
      * Close file output database (if is opened)
-     *
      * @throws Exception
      */
     @Override
@@ -296,6 +329,12 @@ public class FileDatabaseConnection implements DatabaseConnection, Observer{
         return builder.toString();
     }
 
+    /**
+     * Observer override update method, receive change notifications from FileDatabase
+     *
+     * @param o - Observable object instance (FileDatabase)
+     * @param arg - changed data (optional)
+     */
     @Override
     public void update(Observable o, Object arg) {
 
@@ -316,11 +355,17 @@ public class FileDatabaseConnection implements DatabaseConnection, Observer{
        }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public DatabaseRepositoryFactory getRepositoryFactory() {
         return repositoryFactory;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public <E> Repository<E> getRepository(Project project) {
         return repositoryFactory.getRepository(this.getDatabase(), project);

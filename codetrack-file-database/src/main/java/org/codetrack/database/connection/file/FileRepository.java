@@ -30,46 +30,94 @@ import java.util.Date;
 import java.util.Map;
 
 /**
+ * FileDatabase based Repository implementation
+ *
  * @author josecmoj at 07/07/15.
  */
 @Component
 @Scope("prototype")
 public class FileRepository<T> implements Repository<T>{
 
-    public FileProject getProject() {
-        return project;
-    }
+    /**
+     * File database instance
+     */
+    protected FileDatabase database;
 
-    public void setProject(FileProject project) {
-        this.project = project;
-    }
-
+    /**
+     * Project reference instance
+     */
     protected FileProject project;
 
+    /**
+     * Default constructor
+     */
     public FileRepository(){
         super();
     }
 
+    /**
+     * Construtor with parameters
+     *
+     * @param database - database instance reference
+     * @param project  - project instance reference
+     */
     public FileRepository(FileDatabase database, FileProject project){
         super();
         setDatabase(database);
         setProject(project);
     }
 
+    /**
+     * Access project instance
+     *
+     * @return instance of Project
+     */
+    public FileProject getProject() {
+        return project;
+    }
+
+    /**
+     * Setting project instance
+     *
+     * @param project - the project instance
+     */
+    public void setProject(FileProject project) {
+        this.project = project;
+    }
+
+    /**
+     * Access database instance
+     * @return FileDatabase instance
+     */
     public FileDatabase getDatabase() {
         return database;
     }
 
+    /**
+     * Setting database instance
+     * @param database - FileDatabase instance
+     */
     public void setDatabase(FileDatabase database) {
         this.database = database;
     }
 
-    protected FileDatabase database;
-
+    /**
+     * Tool method to get item class
+     * @param item - generic item
+     * @return Class of item
+     */
     private Class getItemClass(T item){
         return item.getClass();
     }
 
+    /**
+     * {@inheritDoc}
+     * Put item data in the project graph and change the database state
+     *
+     * @param item instance to be saved
+     * @return item instance with saved state information
+     * @throws CanNotSaveData when item is null
+     */
     @Override
     public T save(T item) throws CanNotSaveData {
 
@@ -97,6 +145,14 @@ public class FileRepository<T> implements Repository<T>{
         }
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * Remove item data from the project graph and change database state
+     * @param item instance to be removed
+     * @return item removed instance
+     * @throws CanNotRemoveData when item is null or item not found in project data graph
+     */
     @Override
     public T remove(T item) throws CanNotRemoveData {
 
@@ -122,6 +178,12 @@ public class FileRepository<T> implements Repository<T>{
         }
     }
 
+    /**
+     * Search item in the project data graph
+     * @param request Search request
+     * @return SearchResponse instance
+     * @throws CanNotFoundData if request is null or the item is not found in the project data graph
+     */
     @Override
     public SearchResponse<T> search(SearchRequest<T> request) throws CanNotFoundData {
 
@@ -136,9 +198,16 @@ public class FileRepository<T> implements Repository<T>{
             }
         }
 
-        return null;
+        throw new CanNotFoundData("Can not found null item!");
+
     }
 
+    /**
+     * Search the first item in the project graph by id
+     * @param request - SearchOneById instance
+     * @return SearchResponse with item
+     * @throws CanNotFoundData when no item found int project graph
+     */
     private SearchResponse<T> searchOneById(SearchOneById<T> request) {
 
         //Validate
@@ -156,6 +225,12 @@ public class FileRepository<T> implements Repository<T>{
                 .build();
     }
 
+    /**
+     * Search the items in the project graph by id
+     * @param request - SearchLikeId instance
+     * @return SearchResponse with items
+     * @throws CanNotFoundData when no item found int project graph
+     */
     private SearchResponse<T> searchLikeId(SearchLikeId<T> request) {
 
         //Validate

@@ -27,15 +27,28 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
+ * FileDatabase repository factory
+ *
  * @author josecmoj at 16/07/15.
  */
 @Component
 @Scope("prototype")
 public class FileDatabaseRepositoryFactory implements DatabaseRepositoryFactory {
 
+    /**
+     * Spring injected context
+     */
     @Autowired
     private ApplicationContext context;
 
+    /**
+     * Get a FileRepository based instance
+     *
+     * @param database instance of database
+     * @param project  instance of project
+     * @param <E>      generic graph data class
+     * @return instance of FileRepository
+     */
     @Override
     public <E> Repository<E> getRepository(Database database, Project project) {
         FileRepository<E> fileRepository = context.getBean(FileRepository.class, database, project);

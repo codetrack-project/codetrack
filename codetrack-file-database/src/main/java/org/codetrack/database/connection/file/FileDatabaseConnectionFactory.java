@@ -29,33 +29,59 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 /**
+ * File based Database connection implementation
+ *
  * @author josecmoj at 06/07/15.
  */
 @Component
 public class FileDatabaseConnectionFactory implements DatabaseConnectionFactory{
 
+    /**
+     * Spring context injected
+     */
     @Autowired
     private ApplicationContext context;
 
+    /**
+     * DatabaseManager injected instance
+     */
     @Autowired
     private DatabaseManager databaseManager;
 
+    /**
+     * Register the connection factory in the DatabaseManager
+     */
     @PostConstruct
     public void register(){
         if (databaseManager != null)
             databaseManager.registerConnectionFactory(this);
     }
 
+    /**
+     * {@inheritDoc}
+     * <p>
+     * Always is FILE
+     */
     @Override
     public DatabaseEngine getEngine() {
         return DatabaseEngine.FILE;
     }
 
+    /**
+     * Testing engine type
+     * @param engine - enum database engine type
+     * @return true if engine is FILE type
+     */
     @Override
     public boolean isLikeThisEngine(DatabaseEngine engine) {
         return (DatabaseEngine.FILE.equals(engine));
     }
 
+    /**
+     * Factory method to get new FileDatabaseConnection instance
+     * @param databaseParameters - parameters for create connection instance
+     * @return new instance of FileDatabaseConnection
+     */
     @Override
     public DatabaseConnection getInstance(DatabaseParameters databaseParameters) {
         FileDatabaseConnection connection = context.getBean(FileDatabaseConnection.class);
