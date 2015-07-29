@@ -27,6 +27,14 @@ import org.codetrack.repository.Repository;
  */
 public interface DatabaseRepositoryFactory {
 
+    /**
+     * Get instance of Repository
+     *
+     * @param database instance of database
+     * @param project  instance of project
+     * @param <E>      generic class
+     * @return instance of Repository
+     */
     <E> Repository<E> getRepository(Database database, Project project);
 
 }
