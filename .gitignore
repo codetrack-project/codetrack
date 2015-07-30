@@ -13,6 +13,10 @@ hs_err_pid*
 
 target/
 
+# IDE controller files
+.idea/
+*.iml
+
 # Logging files
 *.log
 *.hist
@@ -116,3 +120,6 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 .nb-gradle/
+=======
+codetrack-parent/codetrack-parent.iml
+>>>>>>> feature/#4-DATABASE

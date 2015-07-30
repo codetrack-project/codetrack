@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/codetrack.iml" filepath="$PROJECT_DIR$/codetrack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-annotation-java/codetrack-annotation-java.iml" filepath="$PROJECT_DIR$/codetrack-annotation-java/codetrack-annotation-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-annotation-jsf/codetrack-annotation-jsf.iml" filepath="$PROJECT_DIR$/codetrack-annotation-jsf/codetrack-annotation-jsf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-core/codetrack-core.iml" filepath="$PROJECT_DIR$/codetrack-core/codetrack-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-database/codetrack-database.iml" filepath="$PROJECT_DIR$/codetrack-database/codetrack-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-file-database/codetrack-file-database.iml" filepath="$PROJECT_DIR$/codetrack-file-database/codetrack-file-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-scanner-core/codetrack-scanner-core.iml" filepath="$PROJECT_DIR$/codetrack-scanner-core/codetrack-scanner-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-scanner-java/codetrack-scanner-java.iml" filepath="$PROJECT_DIR$/codetrack-scanner-java/codetrack-scanner-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-scanner-jsf/codetrack-scanner-jsf.iml" filepath="$PROJECT_DIR$/codetrack-scanner-jsf/codetrack-scanner-jsf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codetrack-shell/codetrack-shell.iml" filepath="$PROJECT_DIR$/codetrack-shell/codetrack-shell.iml" />
+    </modules>
+  </component>
+</project>

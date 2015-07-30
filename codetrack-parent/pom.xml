@@ -21,7 +21,7 @@
     <parent>
         <artifactId>org.codetrack</artifactId>
         <groupId>codetrack</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>codetrack-parent</artifactId>
@@ -36,6 +36,8 @@
         <org.reflections-version>0.9.9</org.reflections-version>
         <logback-version>1.1.2</logback-version>
         <slf4j-version>1.7.10</slf4j-version>
+        <org.junit.version>4.5</org.junit.version>
+        <mockito-core.version>1.10.19</mockito-core.version>
     </properties>
 
     <build>
@@ -122,12 +124,17 @@
                 <version>${slf4j-version}</version>
             </dependency>
 
+            <!-- Test dependencies -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.5</version>
+                <version>§{org.junit.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -1,39 +1,43 @@
 /*
- * Copyright 2015 the original author or authors members of codetrack.org
+ *  Copyright 2015 the original author or authors members of codetrack.org
  *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
  *
- *       http://www.apache.org/licenses/LICENSE-2.0
+ *        http://www.apache.org/licenses/LICENSE-2.0
  *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ *
  */
 
 package org.codetrack.database.connection;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.DatabaseParameters;
-import org.codetrack.database.connection.file.FileDatabase;
-import org.codetrack.database.data.Database;
+import org.codetrack.domain.data.Database;
+import org.codetrack.domain.data.Project;
+import org.codetrack.repository.Repository;
 
 /**
  * Interface to database connection
  *
  * @author josecmoj at 29/04/15.
  * @see DatabaseParameters
- * @see FileDatabase
  */
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
 public interface DatabaseConnection {
 
     /**
      * Access database graph instance
      *
      * @return Database instance
-     * @see FileDatabase
      */
     Database getDatabase();
 
@@ -41,7 +45,6 @@ public interface DatabaseConnection {
      * Set a database graph instance
      *
      * @param database instance
-     * @see FileDatabase
      */
     void setDatabase(Database database);
 
@@ -102,5 +105,22 @@ public interface DatabaseConnection {
      * @return String with status information
      */
     String state();
+
+    /**
+     * Access the repository factory
+     *
+     * @return instance of DatabaseRepositoryFactory
+     */
+    DatabaseRepositoryFactory getRepositoryFactory();
+
+    /**
+     * Get a DatabaseRepositoryFactory instance to handle Item
+     *
+     * @param project - project instance to get repository
+     * @param <E> - type of item to handle
+     * @return Repository instance
+     */
+    <E> Repository<E> getRepository(Project project);
+
 
 }

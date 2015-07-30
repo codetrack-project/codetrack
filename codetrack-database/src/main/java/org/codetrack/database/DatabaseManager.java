@@ -1,28 +1,30 @@
 /*
- * Copyright 2015 the original author or authors members of codetrack.org
+ *  Copyright 2015 the original author or authors members of codetrack.org
  *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
  *
- *       http://www.apache.org/licenses/LICENSE-2.0
+ *        http://www.apache.org/licenses/LICENSE-2.0
  *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ *
  */
 
 package org.codetrack.database;
 
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
 import org.codetrack.database.connection.DatabaseConnection;
-import org.codetrack.database.connection.file.FileDatabaseConnection;
 import org.codetrack.database.exception.DatabaseError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
@@ -34,7 +36,9 @@ import java.util.Map;
  *
  * @author josecmoj at 25/04/15.
  */
-@Component
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
+@Service
 public class DatabaseManager {
 
     @Autowired
@@ -57,12 +61,22 @@ public class DatabaseManager {
      */
     private Hashtable<String, DatabaseConnection> databaseConnectionTable = new Hashtable<>();
 
+    private Hashtable<DatabaseEngine, DatabaseConnectionFactory> databaseConnectionFactoryTable = new Hashtable<>();
+
     /**
      * Load an initialize data
      */
     @PostConstruct
     public void init() {
         databaseInfoTable = databaseConfiguration.loadRegisteredDatabases();
+    }
+
+    public DatabaseConfiguration getDatabaseConfiguration() {
+        return databaseConfiguration;
+    }
+
+    public void setDatabaseConfiguration(DatabaseConfiguration databaseConfiguration) {
+        this.databaseConfiguration = databaseConfiguration;
     }
 
     /**
@@ -99,7 +113,7 @@ public class DatabaseManager {
      * @return active DatabaseConnection instance
      */
     public DatabaseConnection getActiveDatabaseConnection() {
-        return databaseConnectionTable.get(activeDatabaseParameters.getName());
+        return (activeDatabaseParameters == null ? null: databaseConnectionTable.get(activeDatabaseParameters.getName()));
     }
 
     /**
@@ -146,7 +160,6 @@ public class DatabaseManager {
                 conn = createConnection(databaseInfoTable.get(name));
             }
             conn.open();
-            ;
             conn.delete();
 
             databaseConfiguration.removeConfiguration(name);
@@ -232,14 +245,12 @@ public class DatabaseManager {
      */
     private DatabaseConnection createConnection(DatabaseParameters databaseParameters) {
 
-        switch (databaseParameters.getEngine()) {
+        DatabaseConnectionFactory factory = databaseConnectionFactoryTable.get(databaseParameters.getEngine());
 
-            case FILE:
-                return new FileDatabaseConnection(databaseParameters);
+        if (factory != null)
+            return factory.getInstance(databaseParameters);
 
-            default:
-                return null;
-        }
+        return null;
 
     }
 
@@ -359,4 +370,15 @@ public class DatabaseManager {
 
     }
 
+    /**
+     * Register an DatabaseConnectionFactory in the under control of this DatabaseManager
+     * @param connectionFactory the factory instance
+     */
+    public void registerConnectionFactory(DatabaseConnectionFactory connectionFactory){
+        databaseConnectionFactoryTable.put(connectionFactory.getEngine(), connectionFactory);
+    }
+
+    public boolean isRegistered(DatabaseParameters databaseParameters) {
+        return databaseInfoTable.containsKey(databaseParameters.getName());
+    }
 }
