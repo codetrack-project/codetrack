@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba182f84-0973-476a-8e6b-7db1c8751b84" name="Default" comment="Complete javadoc information">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/package-info.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/package-info.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/package-info.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/command/ApplicationCommand.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/command/ApplicationCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/BannerProvider.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/BannerProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/shell/DatabaseCommand.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/shell/DatabaseCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseConnectionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseEngine.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseEngine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/exception/DatabaseError.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/exception/DatabaseError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java" afterPath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseParameters.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseParameters.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseParametersTest.java" afterPath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseParametersTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java" afterPath="$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/connection/DatabaseRepositoryFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseTestConfiguration.java" afterPath="$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseTestConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseConnectionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseConnectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseException.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseRepositoryFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseRepositoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseState.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileDatabaseState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileDatabaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileProject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileProjectTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/main/java/org/codetrack/database/connection/file/FileRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/FileTestConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/HistoryFileNameProvider.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/HistoryFileNameProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/Main.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" afterPath="$PROJECT_DIR$/codetrack-file-database/src/test/java/org/codetrack/database/connection/file/PrepareTestEnvironment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/PromptProvider.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/PromptProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellApplicationInfo.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellApplicationInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellConfiguration.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellFileInfo.java" afterPath="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellFileInfo.java" />
+    <list default="true" id="ba182f84-0973-476a-8e6b-7db1c8751b84" name="Default" comment="Adding codetrack annotations">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="03cc4ae8-0883-46e6-99ab-b79f037b0a87" name="Rejected commit: Default" comment="Add org.codetrack.annotation.temporal package and move the temporal type annotations." />
@@ -119,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/command/ApplicationCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="32" />
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -129,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/BannerProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -139,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/HistoryFileNameProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -149,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/PromptProvider.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.27068967">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -159,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -169,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -179,17 +142,17 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellFileInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="35" />
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
-                <element signature="e#1129#1130#0" expanded="true" />
-                <element signature="e#1181#1182#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1733#1734#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
+                <element signature="e#1118#1119#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1218#1219#0" expanded="true" />
+                <element signature="e#1272#1273#0" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1770#1771#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,7 +182,7 @@
         <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellApplicationInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -305,11 +268,11 @@
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/command/ApplicationCommand.java" />
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/BannerProvider.java" />
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/HistoryFileNameProvider.java" />
-        <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/PromptProvider.java" />
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/Main.java" />
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellApplicationInfo.java" />
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellFileInfo.java" />
         <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellConfiguration.java" />
+        <option value="$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/PromptProvider.java" />
       </list>
     </option>
   </component>
@@ -1799,7 +1762,13 @@
       <option name="project" value="LOCAL" />
       <updated>1438172186299</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Adding codetrack annotations">
+      <created>1438173201326</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1438173201326</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers>
       <Trello shared="false">
         <commitMessageFormat>{id} {summary}</commitMessageFormat>
@@ -1894,7 +1863,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change retention policy of annotation to RetentionRetentionPolicy.RUNTIME" />
     <MESSAGE value="Move the SampleAnnotated.java for the sample package&#10;Add observation text to Fix annotation" />
     <MESSAGE value="The sample fix observation text correction" />
     <MESSAGE value="Add two new tags: Feature, Reference, Requirement and Sprint" />
@@ -1919,7 +1887,8 @@
     <MESSAGE value="Create test to FileProject class" />
     <MESSAGE value="Fix the FileProject.newBuilde() null pointer exception" />
     <MESSAGE value="Complete javadoc information" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete javadoc information" />
+    <MESSAGE value="Adding codetrack annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding codetrack annotations" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1929,13 +1898,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/shell/DatabaseCommand.java</url>
-          <line>136</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/shell/DatabaseCommand.java</url>
-          <line>198</line>
+          <line>199</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -1989,13 +1958,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java</url>
-          <line>61</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
-          <line>246</line>
+          <line>247</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
@@ -2007,25 +1976,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/test/java/org/codetrack/database/DatabaseManagerTest.java</url>
-          <line>59</line>
+          <line>76</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
-          <line>114</line>
+          <line>115</line>
           <properties />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
-          <line>73</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/codetrack-database/src/main/java/org/codetrack/database/DatabaseManager.java</url>
-          <line>77</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
@@ -2260,8 +2229,8 @@
           <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2092#2093#0" expanded="true" />
-            <element signature="e#2119#2120#0" expanded="true" />
+            <element signature="e#2105#2106#0" expanded="true" />
+            <element signature="e#2132#2133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2443,7 +2412,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/command/ApplicationCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="32" />
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -2451,7 +2420,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/BannerProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -2459,7 +2428,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/HistoryFileNameProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -2467,7 +2436,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -2491,17 +2460,17 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellFileInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="35" />
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2509,7 +2478,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -2517,7 +2486,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/ShellApplicationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -2525,7 +2494,7 @@
     <entry file="file://$PROJECT_DIR$/codetrack-shell/src/main/java/org/codetrack/shell/information/PromptProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27068967">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding />
         </state>
       </provider>
