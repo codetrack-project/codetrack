@@ -156,7 +156,7 @@ public class DatabaseConfiguration {
 
         try {
 
-            Iterator it = databaseProperties().getKeys("databases.registered");
+            Iterator it = databaseProperties().getKeys("database.registered");
 
             while (it.hasNext()) {
 

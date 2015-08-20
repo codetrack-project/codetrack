@@ -15,46 +15,34 @@
  *
  */
 
-package org.codetrack.domain.data;
+package org.codetrack.database.file;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
 
-import java.io.Serializable;
-import java.util.Date;
-
 /**
- * @author josecmoj at 05/05/15.
+ * FileDatabase state Enum
+ *
+ * @author josecmoj at 08/07/15.
  */
-@Product(id = "codetrack-core")
+@Product(id = "codetrack-file-database")
 @Feature(id = "#4-DATABASE")
-public interface Database extends Serializable {
+public enum FileDatabaseState {
 
-    Date getLastUpdate();
-
-    void setLastUpdate(Date lastUpdate);
-
-    String getName();
-
-    void setName(String name);
-
-    Project getProject();
-
-    void setProject(Project project);
-
-    boolean isModified();
-
-    void markIsLoaded();
-
-    void addProject(Project project);
-
-    void removeProject(Project project);
-
-    Project findProject(String id);
-
-    Project selectProject(String id);
-
-    void changed();
-
-    void save();
+    /**
+     * LOADED - when load database data is completed
+     */
+    LOADED,
+    /**
+     * LOADING - when database is in loading process
+     */
+    LOADING,
+    /**
+     * CHANGED - when any database data is modified
+     */
+    CHANGED,
+    /**
+     * SAVING - when database is in saving process
+     */
+    SAVING
 }

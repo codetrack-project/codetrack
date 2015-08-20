@@ -15,15 +15,15 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import junit.framework.TestCase;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
+import org.codetrack.database.Database;
+import org.codetrack.database.DatabaseConnection;
 import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
-import org.codetrack.database.connection.DatabaseConnection;
-import org.codetrack.domain.data.Database;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

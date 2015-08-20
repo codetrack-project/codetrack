@@ -15,9 +15,10 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import com.google.common.base.Strings;
+import com.google.common.collect.Lists;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
 import org.codetrack.domain.data.ProjectItem;
@@ -29,6 +30,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -182,6 +184,21 @@ public class FileRepository<T> implements Repository<T>{
         }
     }
 
+    @Override
+    public List<T> remove(SearchResponse<T> response) throws CanNotRemoveData {
+
+        if (response == null) {
+            throw new CanNotRemoveData("Search response is null");
+        }
+
+        List<T> result = Lists.newArrayList();
+        if (response.getItems().size() > 0) {
+            result.addAll(response.getItems());
+        }
+
+        return result;
+    }
+
     /**
      * Search item in the project data graph
      * @param request Search request
@@ -200,9 +217,25 @@ public class FileRepository<T> implements Repository<T>{
             if (request instanceof SearchLikeId){
                 return searchLikeId(((SearchLikeId)request));
             }
+
+            if (request instanceof SearchAll) {
+                return searchAll((SearchAll) request);
+            }
         }
 
         throw new CanNotFoundData("Can not found null item!");
+
+    }
+
+    private SearchResponse<T> searchAll(SearchAll request) {
+
+        Map map = project.getMapItems(request.getItemClazz());
+
+        SearchResponse.Builder response = SearchResponse.newBuilder();
+        response.request(request);
+        response.items(Lists.newArrayList(map.values()));
+
+        return response.build();
 
     }
 

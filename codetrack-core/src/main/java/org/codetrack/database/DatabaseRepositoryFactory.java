@@ -15,34 +15,29 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
+import org.codetrack.domain.data.Project;
+import org.codetrack.repository.Repository;
 
 /**
- * FileDatabase state Enum
- *
- * @author josecmoj at 08/07/15.
+ * Interface defines operations of an repository factory
+ * @author josecmoj at 16/07/15.
  */
-@Product(id = "codetrack-file-database")
+@Product(id = "codetrack-database")
 @Feature(id = "#4-DATABASE")
-public enum FileDatabaseState {
+public interface DatabaseRepositoryFactory {
 
     /**
-     * LOADED - when load database data is completed
+     * Get instance of Repository
+     *
+     * @param database instance of database
+     * @param project  instance of project
+     * @param <E>      generic class
+     * @return instance of Repository
      */
-    LOADED,
-    /**
-     * LOADING - when database is in loading process
-     */
-    LOADING,
-    /**
-     * CHANGED - when any database data is modified
-     */
-    CHANGED,
-    /**
-     * SAVING - when database is in saving process
-     */
-    SAVING
+    <E> Repository<E> getRepository(Database database, Project project);
+
 }

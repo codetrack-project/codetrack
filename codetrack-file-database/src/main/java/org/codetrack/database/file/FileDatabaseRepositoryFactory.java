@@ -15,12 +15,12 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.database.connection.DatabaseRepositoryFactory;
-import org.codetrack.domain.data.Database;
+import org.codetrack.database.Database;
+import org.codetrack.database.DatabaseRepositoryFactory;
 import org.codetrack.domain.data.Project;
 import org.codetrack.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;

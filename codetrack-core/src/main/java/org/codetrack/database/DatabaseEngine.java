@@ -15,13 +15,20 @@
  *
  */
 
+package org.codetrack.database;
+
+import org.codetrack.annotation.definition.Feature;
+import org.codetrack.annotation.identify.Product;
+
 /**
- * @author josecmoj at 06/06/15.
+ * Enum of Database engine types
+ *
+ * @author josecmoj at 29/04/15.
  */
-@Cycles({
-        @Cycle(id = "1.1-RELEASE", startAt = "2015/O5/01", endAt = "2015/07/31")
-}) package org.codetrack.database.connection.file;
+@Product(id = "codetrack-database")
+@Feature(id = "#4-DATABASE")
+public enum DatabaseEngine {
 
-import org.codetrack.annotation.temporal.Cycle;
-import org.codetrack.annotation.temporal.Cycles;
+    FILE
 
+}

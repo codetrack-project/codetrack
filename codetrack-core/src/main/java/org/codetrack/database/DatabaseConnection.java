@@ -15,12 +15,10 @@
  *
  */
 
-package org.codetrack.database.connection;
+package org.codetrack.database;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.database.DatabaseParameters;
-import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
 import org.codetrack.repository.Repository;
 

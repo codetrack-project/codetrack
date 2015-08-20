@@ -15,7 +15,7 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;

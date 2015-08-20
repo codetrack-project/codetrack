@@ -20,8 +20,6 @@ package org.codetrack.database;
 import junit.framework.TestCase;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.database.connection.DatabaseConnection;
-import org.codetrack.domain.data.Database;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;

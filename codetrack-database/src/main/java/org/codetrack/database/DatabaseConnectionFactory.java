@@ -19,7 +19,6 @@ package org.codetrack.database;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.database.connection.DatabaseConnection;
 
 /**
  * Interface defines operations of an connection factory

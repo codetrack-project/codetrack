@@ -149,10 +149,9 @@ public class DatabaseParameters {
         if (url != null ? !url.equals(that.url) : that.url != null) return false;
         if (user != null ? !user.equals(that.user) : that.user != null) return false;
         if (engine != null ? !engine.equals(that.engine) : that.engine != null) return false;
-        if (path != null ? !path.equals(that.path) : that.path != null) return false;
+        return !(path != null ? !path.equals(that.path) : that.path != null);
 
 
-        return true;
     }
 
     @Override

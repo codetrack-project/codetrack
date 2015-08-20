@@ -15,7 +15,7 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import com.google.common.collect.Maps;
 import junit.framework.TestCase;

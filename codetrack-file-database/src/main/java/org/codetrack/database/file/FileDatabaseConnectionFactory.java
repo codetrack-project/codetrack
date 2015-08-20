@@ -15,15 +15,11 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.database.DatabaseConnectionFactory;
-import org.codetrack.database.DatabaseEngine;
-import org.codetrack.database.DatabaseManager;
-import org.codetrack.database.DatabaseParameters;
-import org.codetrack.database.connection.DatabaseConnection;
+import org.codetrack.database.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;

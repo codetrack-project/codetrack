@@ -15,17 +15,20 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import com.google.common.base.Objects;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
+import org.codetrack.database.Database;
+import org.codetrack.database.DatabaseConnection;
 import org.codetrack.database.exception.DatabaseError;
-import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Observable;
 
@@ -66,6 +69,7 @@ public class FileDatabase extends Observable implements Database {
     private transient int loadedHashCode;
 
     private transient FileDatabaseState state;
+    private transient FileDatabaseConnection connection;
 
     public FileDatabase() {
         projectMap = Maps.newTreeMap();
@@ -172,6 +176,18 @@ public class FileDatabase extends Observable implements Database {
         this.state = FileDatabaseState.LOADED;
     }
 
+    @Override
+    public Project createProject(String id, String name) {
+        FileProject project = FileProject.newBuilder()
+                .id(id)
+                .name(name)
+                .build();
+
+        addProject(project);
+
+        return project;
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -197,7 +213,7 @@ public class FileDatabase extends Observable implements Database {
     public Project findProject(String id) {
 
         if (projectMap.containsKey(id))
-            return projectMap.remove(id);
+            return projectMap.get(id);
         else
             throw new DatabaseError("FileProject " + id + " not found", DatabaseError.DATABASE_PROJECT_NOT_FOUND);
 
@@ -218,7 +234,8 @@ public class FileDatabase extends Observable implements Database {
     }
 
     /**
-     * {@inheritDoc}
+     * This notify database connection to save database data
+     * @see Database#save()
      */
     @Override
     public void save() {
@@ -227,8 +244,24 @@ public class FileDatabase extends Observable implements Database {
 
     }
 
+    @Override
+    public List<Project> allProjects() {
+        return Lists.newArrayList(this.projectMap.values());
+    }
+
+
+    @Override
+    public DatabaseConnection getConnection() {
+        return this.connection;
+    }
+
+    @Override
+    public void setConnection(DatabaseConnection connection) {
+        this.connection = (FileDatabaseConnection) connection;
+    }
+
     /**
-     * {@inheritDoc}
+     * This method modified database state to CHANGED
      */
     @Override
     public void changed() {
@@ -236,8 +269,8 @@ public class FileDatabase extends Observable implements Database {
         setState(FileDatabaseState.CHANGED);
     }
 
-    /**
-     * {@inheritDoc}
+    /*
+     * @see Database#equals(Object)
      */
     @Override
     public boolean equals(Object o) {
@@ -251,16 +284,16 @@ public class FileDatabase extends Observable implements Database {
                 Objects.equal(getLastUpdate(), that.getLastUpdate());
     }
 
-    /**
-     * {@inheritDoc}
+    /*
+     * @see Database#hashCode()
      */
     @Override
     public int hashCode() {
         return Objects.hashCode(getName(), getLastUpdate());
     }
 
-    /**
-     * {@inheritDoc}
+    /*
+     * @see Database#toString()
      */
     @Override
     public String toString() {

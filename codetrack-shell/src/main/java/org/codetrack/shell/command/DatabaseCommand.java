@@ -15,7 +15,7 @@
  *
  */
 
-package org.codetrack.database.shell;
+package org.codetrack.shell.command;
 
 import com.google.common.base.Strings;
 import org.codetrack.annotation.definition.Feature;
@@ -25,6 +25,7 @@ import org.codetrack.database.DatabaseEngine;
 import org.codetrack.database.DatabaseManager;
 import org.codetrack.database.DatabaseParameters;
 import org.codetrack.database.exception.DatabaseError;
+import org.codetrack.shell.ShellContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +58,9 @@ public class DatabaseCommand implements CommandMarker {
      */
     @Autowired
     private DatabaseConfiguration databaseConfiguration;
+
+    @Autowired
+    private ShellContext shellContext;
 
     /**
      * Verify availability of "database register" command
@@ -151,7 +155,8 @@ public class DatabaseCommand implements CommandMarker {
 
         databaseManager.register(builder.build());
         databaseManager.uses(name);
-        databaseManager.setProjectDescription(description);
+
+        shellContext.setActiveDatabase(databaseManager.getActiveDatabaseConnection().getDatabase());
 
         return "Database " + name + " is registered!";
 
@@ -201,6 +206,8 @@ public class DatabaseCommand implements CommandMarker {
             try {
 
                 databaseManager.uses(name);
+                shellContext.setActiveDatabase(databaseManager.getActiveDatabaseConnection().getDatabase());
+                shellContext.setActiveDatabaseConnection(databaseManager.getActiveDatabaseConnection());
 
             } catch (DatabaseError dbe) {
                 logger.error("Error on use database " + name, dbe);

@@ -15,14 +15,14 @@
  *
  */
 
-package org.codetrack.database.connection.file;
+package org.codetrack.database.file;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Maps;
 import org.apache.commons.collections.MapUtils;
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.domain.data.Database;
+import org.codetrack.database.Database;
 import org.codetrack.domain.data.Project;
 import org.codetrack.domain.data.ProjectItem;
 

@@ -17,46 +17,6 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for codetrack-scanner-jsf" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="codetrack-scanner-jsf" />
-      </profile>
-      <profile default="false" name="Annotation profile for codetrack-scanner-core" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="codetrack-scanner-core" />
-      </profile>
-      <profile default="false" name="Annotation profile for codetrack-annotation-java" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for codetrack-annotation-jsf" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Annotation profile for codetrack-database" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="codetrack-database" />
-      </profile>
-      <profile default="false" name="Annotation profile for codetrack-shell" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="codetrack-shell" />
-      </profile>
       <profile default="false" name="Annotation profile for codetrack-scanner-java" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -71,11 +31,54 @@
         <processorPath useClasspath="true" />
         <module name="codetrack-core" />
       </profile>
+      <profile default="false" name="Annotation profile for codetrack-annotation-jsf" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-annotation-jsf" />
+      </profile>
+      <profile default="false" name="Annotation profile for codetrack-shell" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-shell" />
+      </profile>
+      <profile default="false" name="Annotation profile for codetrack-database" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-database" />
+      </profile>
+      <profile default="false" name="Annotation profile for codetrack-scanner-core" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-scanner-core" />
+      </profile>
       <profile default="false" name="Annotation profile for codetrack-file-database" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="codetrack-file-database" />
+      </profile>
+      <profile default="false" name="Annotation profile for codetrack-scanner-jsf" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-scanner-jsf" />
+      </profile>
+      <profile default="false" name="Annotation profile for codetrack-annotation-java" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="codetrack-annotation-java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -85,12 +88,11 @@
       <module name="codetrack-core" target="1.8" />
       <module name="codetrack-database" target="1.8" />
       <module name="codetrack-file-database" target="1.8" />
-      <module name="codetrack-parent" target="1.7" />
+      <module name="codetrack-parent" target="1.5" />
       <module name="codetrack-scanner-core" target="1.8" />
       <module name="codetrack-scanner-java" target="1.8" />
       <module name="codetrack-scanner-jsf" target="1.8" />
       <module name="codetrack-shell" target="1.8" />
-      <module name="codetrack-tracker" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

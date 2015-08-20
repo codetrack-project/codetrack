@@ -19,7 +19,6 @@ package org.codetrack.database;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.database.connection.DatabaseConnection;
 import org.codetrack.database.exception.DatabaseError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

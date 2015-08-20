@@ -21,6 +21,8 @@ import org.codetrack.exception.CanNotFoundData;
 import org.codetrack.exception.CanNotRemoveData;
 import org.codetrack.exception.CanNotSaveData;
 
+import java.util.List;
+
 /**
  * @author josecmoj at 09/07/15.
  */
@@ -40,9 +42,18 @@ public interface Repository<T> {
      *
      * @param item instance to be removed
      * @return the removed item instance
-     * @throws CanNotRemoveData if is not possible to remove Mark instance
+     * @throws CanNotRemoveData if is not possible to remove item instance
      */
     T remove(T item) throws CanNotRemoveData;
+
+    /**
+     * Remove items from a search result response
+     *
+     * @param response search response with items to be removed
+     * @return list of items removed
+     * @throws CanNotRemoveData if is not possible to remove items instance
+     */
+    List<T> remove(SearchResponse<T> response) throws CanNotRemoveData;
 
     /**
      * Search method

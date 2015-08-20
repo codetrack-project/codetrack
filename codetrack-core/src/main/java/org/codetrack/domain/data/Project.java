@@ -69,26 +69,4 @@ public interface Project extends Serializable {
      */
     void setName(String name);
 
-    /**
-     * Find first ProjectItem related with id
-     *
-     * @param id String of ProjectItem
-     * @return ProjectItem instance founded or null if not found
-     */
-    //ProjectItem findById(String id);
-
-    /**
-     * Add an ProjectItem instance in the project
-     * @param projectItem to remove
-     * @return this Project instance
-     */
-    //Project add(ProjectItem projectItem);
-
-    /**
-     * Remove an ProjectItems instance of project
-     * @param projectItem to remove
-     * @return this Project instance
-     */
-    //Project remove(ProjectItem projectItem);
-
 }

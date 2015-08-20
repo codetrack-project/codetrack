@@ -15,30 +15,56 @@
  *
  */
 
-package org.codetrack.database.connection;
+package org.codetrack.database;
 
 import org.codetrack.annotation.definition.Feature;
 import org.codetrack.annotation.identify.Product;
-import org.codetrack.domain.data.Database;
 import org.codetrack.domain.data.Project;
-import org.codetrack.repository.Repository;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
- * Interface defines operations of an repository factory
- * @author josecmoj at 16/07/15.
+ * @author josecmoj at 05/05/15.
  */
-@Product(id = "codetrack-database")
+@Product(id = "codetrack-core")
 @Feature(id = "#4-DATABASE")
-public interface DatabaseRepositoryFactory {
+public interface Database extends Serializable {
 
-    /**
-     * Get instance of Repository
-     *
-     * @param database instance of database
-     * @param project  instance of project
-     * @param <E>      generic class
-     * @return instance of Repository
-     */
-    <E> Repository<E> getRepository(Database database, Project project);
+    Date getLastUpdate();
 
+    void setLastUpdate(Date lastUpdate);
+
+    String getName();
+
+    void setName(String name);
+
+    Project getProject();
+
+    void setProject(Project project);
+
+    boolean isModified();
+
+    void markIsLoaded();
+
+    Project createProject(String id, String name);
+
+    void addProject(Project project);
+
+    void removeProject(Project project);
+
+    Project findProject(String id);
+
+    Project selectProject(String id);
+
+    void changed();
+
+    void save();
+
+    List<Project> allProjects();
+
+    DatabaseConnection getConnection();
+
+    void setConnection(DatabaseConnection connection);
 }
