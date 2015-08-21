@@ -87,6 +87,11 @@
             <artifactId>codetrack-database</artifactId>
             <version>1.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.codetrack</groupId>
+            <artifactId>codetrack-file-database</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
